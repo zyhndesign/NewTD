@@ -12,6 +12,8 @@
 	<dict>
 		<key>2EDBED39-C42A-4486-A9E0-87E63977C0D6</key>
 		<string>https://github.com/zyhndesign/NewTD.git</string>
+		<key>CCC74F81-904F-41C3-A258-316DD5E1FE0E</key>
+		<string>https://192.168.1.137/svn/DesignDoc</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>NewTD/NewTD.xcodeproj/project.xcworkspace</string>
@@ -19,6 +21,13 @@
 	<dict>
 		<key>2EDBED39-C42A-4486-A9E0-87E63977C0D6</key>
 		<string>../../..</string>
+		<key>CCC74F81-904F-41C3-A258-316DD5E1FE0E</key>
+		<string>../../../../../../MAC_DATA</string>
+	</dict>
+	<key>IDESourceControlProjectRepositoryRootDictionary</key>
+	<dict>
+		<key>CCC74F81-904F-41C3-A258-316DD5E1FE0E</key>
+		<string>https://192.168.1.137/svn/DesignDoc</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/zyhndesign/NewTD.git</string>
@@ -28,6 +37,14 @@
 	<string>2EDBED39-C42A-4486-A9E0-87E63977C0D6</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.subversion</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>CCC74F81-904F-41C3-A258-316DD5E1FE0E</string>
+			<key>IDESourceControlWCCName</key>
+			<string>MAC_DATA</string>
+		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
