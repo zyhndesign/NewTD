@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="5053" systemVersion="12F37" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CommunityViewController">
+            <connections>
+                <outlet property="communityTitleLabel" destination="r1H-aA-a7Z" id="5fH-3r-bDj"/>
+                <outlet property="view" destination="zh5-E8-Unc" id="lNN-tT-Y2h"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="zh5-E8-Unc">
+            <rect key="frame" x="0.0" y="0.0" width="1024" height="1363"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="bg4.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="e8C-r0-oRL">
+                    <rect key="frame" x="0.0" y="0.0" width="1024" height="760"/>
+                    <autoresizingMask key="autoresizingMask"/>
+                </imageView>
+                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="maskCommunity1" translatesAutoresizingMaskIntoConstraints="NO" id="8Gc-0A-64P">
+                    <rect key="frame" x="0.0" y="0.0" width="1024" height="210"/>
+                    <autoresizingMask key="autoresizingMask"/>
+                </imageView>
+                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="maskArtifacts2" translatesAutoresizingMaskIntoConstraints="NO" id="X3E-7Z-Ewy">
+                    <rect key="frame" x="0.0" y="574" width="1024" height="190"/>
+                    <autoresizingMask key="autoresizingMask"/>
+                </imageView>
+                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="sectionSlogenBg" translatesAutoresizingMaskIntoConstraints="NO" id="8OD-Ju-Zon">
+                    <rect key="frame" x="315" y="674" width="395" height="60"/>
+                    <autoresizingMask key="autoresizingMask"/>
+                </imageView>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r1H-aA-a7Z">
+                    <rect key="frame" x="392" y="693" width="242" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lJc-jA-eVP">
+                    <rect key="frame" x="0.0" y="775" width="1024" height="450"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                </scrollView>
+                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" image="projectbg_bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="0nm-9c-Gkx">
+                    <rect key="frame" x="0.0" y="1224" width="1024" height="140"/>
+                    <autoresizingMask key="autoresizingMask"/>
+                </imageView>
+                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="sectionTitleShequ" translatesAutoresizingMaskIntoConstraints="NO" id="ayr-97-1HC">
+                    <rect key="frame" x="299" y="198" width="426" height="336"/>
+                    <autoresizingMask key="autoresizingMask"/>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="bg4.jpg" width="1024" height="760"/>
+        <image name="maskArtifacts2" width="1024" height="190"/>
+        <image name="maskCommunity1" width="1024" height="210"/>
+        <image name="projectbg_bg.png" width="1280" height="200"/>
+        <image name="sectionSlogenBg" width="395" height="60"/>
+        <image name="sectionTitleShequ" width="426" height="336"/>
+    </resources>
+</document>
