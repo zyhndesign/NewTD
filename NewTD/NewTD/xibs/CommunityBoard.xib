@@ -6,13 +6,15 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CommunityViewController">
             <connections>
+                <outlet property="communityPageControl" destination="1er-LE-fVc" id="xPv-HP-04d"/>
+                <outlet property="communityScrollView" destination="lJc-jA-eVP" id="1Zu-4z-C9z"/>
                 <outlet property="communityTitleLabel" destination="r1H-aA-a7Z" id="5fH-3r-bDj"/>
                 <outlet property="view" destination="zh5-E8-Unc" id="lNN-tT-Y2h"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="zh5-E8-Unc">
-            <rect key="frame" x="0.0" y="0.0" width="1024" height="1363"/>
+            <rect key="frame" x="0.0" y="0.0" width="1024" height="1379"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="bg4.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="e8C-r0-oRL">
@@ -39,17 +41,26 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lJc-jA-eVP">
-                    <rect key="frame" x="0.0" y="775" width="1024" height="450"/>
+                    <rect key="frame" x="0.0" y="766" width="1024" height="450"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                 </scrollView>
                 <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" image="projectbg_bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="0nm-9c-Gkx">
-                    <rect key="frame" x="0.0" y="1224" width="1024" height="140"/>
+                    <rect key="frame" x="0.0" y="1239" width="1024" height="140"/>
                     <autoresizingMask key="autoresizingMask"/>
                 </imageView>
                 <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="sectionTitleShequ" translatesAutoresizingMaskIntoConstraints="NO" id="ayr-97-1HC">
                     <rect key="frame" x="299" y="198" width="426" height="336"/>
                     <autoresizingMask key="autoresizingMask"/>
                 </imageView>
+                <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="1er-LE-fVc">
+                    <rect key="frame" x="493" y="1215" width="39" height="37"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="currentPageIndicatorTintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <action selector="pageChange:" destination="-1" eventType="valueChanged" id="wXY-c0-CbE"/>
+                    </connections>
+                </pageControl>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
         </view>

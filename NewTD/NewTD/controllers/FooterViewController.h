@@ -9,5 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface FooterViewController : UIViewController
-
+{
+    IBOutlet UIImageView *downloadImageView;
+    IBOutlet UILabel *bgTextlabel;
+}
+@property (strong, nonatomic) IBOutlet UIImageView *downloadImageView;
+@property (strong, nonatomic) IBOutlet UILabel *bgTextlabel;
 @end

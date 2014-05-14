@@ -6,6 +6,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FooterViewController">
             <connections>
+                <outlet property="bgTextlabel" destination="Pdv-bv-qGx" id="Szb-IP-9fP"/>
+                <outlet property="downloadImageView" destination="CeW-5p-ggF" id="Xja-u4-FoH"/>
                 <outlet property="view" destination="h2Z-C6-r5h" id="u2U-r0-Dq5"/>
             </connections>
         </placeholder>

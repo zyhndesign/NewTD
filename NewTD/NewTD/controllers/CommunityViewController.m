@@ -7,6 +7,11 @@
 //
 
 #import "CommunityViewController.h"
+#import "../classes/DBUtils.h"
+#import "../classes/TimeUtil.h"
+#import "Constants.h"
+#import "VarUtils.h"
+#import "../classes/UILabel+VerticalAlign.h"
 
 @interface CommunityViewController ()
 
@@ -14,7 +19,9 @@
 
 @implementation CommunityViewController
 
-@synthesize communityTitleLabel;
+@synthesize communityTitleLabel, communityScrollView, communityPageControl;
+
+extern DBUtils *db;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -29,6 +36,214 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    int countArticle = [db countByCategory:LANDSCAPE_CATEGORY];
+    countPage = (countArticle / LANDSCAPE_PAGE_INSIDE_NUM);
+    if ((countArticle % LANDSCAPE_PAGE_INSIDE_NUM) > 0)
+    {
+        countPage = countPage + 1;
+    }
+    
+    pageControl = communityPageControl;
+    columnScrollView = communityScrollView;
+    
+    pageControl = (UIPageControl *)[self.view viewWithTag:331];
+    columnScrollView.contentSize = CGSizeMake(columnScrollView.frame.size.width * countPage, columnScrollView.frame.size.height);
+    columnScrollView.delegate = self;
+    
+    pageControl.currentPage = 0;
+    pageControl.numberOfPages = countPage;
+    
+    pageControlBeingUsed = NO;
+    
+    
+    muDistionary = [NSMutableDictionary dictionaryWithCapacity:4];
+    currentPage = 0;
+    
+    thumbDownQueue = [NSOperationQueue new];
+    [thumbDownQueue setMaxConcurrentOperationCount:2];
+    
+    for (int i = 0; i < 2; i++)
+    {
+        if (i <= countPage)
+        {
+            [self assemblePanel:i];
+        }
+    }
+}
+
+-(void) assemblePanel:(int) pageNum
+{
+    NSBundle *bundle = [NSBundle mainBundle];
+    NSMutableArray * muArray = [db getLandscapeDataByPage:pageNum];
+    
+    CGRect frame;
+    UIView *subview = [[bundle loadNibNamed:@"LandscapeViewModel_iPad" owner:self options:nil] lastObject];
+    
+    frame.origin.x = columnScrollView.frame.size.width * (pageNum);
+    frame.origin.y = 15;
+    frame.size.width = columnScrollView.frame.size.width;
+    frame.size.height = subview.frame.size.height;
+    
+    NSOperation *downOperation = nil;
+    
+    if (subview != nil && muArray != nil)
+    {
+        UIControl *firstPanel = (UIControl*)[subview viewWithTag:401];
+        UIControl *secondPanel = (UIControl*)[subview viewWithTag:406];
+        UIControl *thirdPanel = (UIControl*)[subview viewWithTag:411];
+        UIControl *fourPanel = (UIControl*)[subview viewWithTag:416];
+        
+        UIView *firstLine = (UIView*)[subview viewWithTag:421];
+        UIView *secondLine = (UIView*)[subview viewWithTag:422];
+        UIView *thirdLine = (UIView*)[subview viewWithTag:423];
+        
+        subview.frame = frame;
+        
+        //根据数据加载subview
+        if (muArray.count >= 1 && [muArray objectAtIndex:0])
+        {
+            NSMutableDictionary *muDict = [muArray objectAtIndex:0];
+            
+            UIImageView *firstImg = (UIImageView*)[subview viewWithTag:402];
+            //异步加载图片
+            downOperation = [self loadingImageOperation:muDict andImageView:firstImg];
+            if (downOperation != nil)
+            {
+                [thumbDownQueue addOperation:downOperation];
+            }
+            
+            UILabel* firstLabelTitle = (UILabel*)[subview viewWithTag:403];
+            [firstLabelTitle setText:[muDict objectForKey:@"title"]];
+            UILabel* firstLabelTime = (UILabel*)[subview viewWithTag:404];
+            [firstLabelTime setText:[TimeUtil convertTimeFormat:[muDict objectForKey:@"timestamp"]]];
+            UILabel* firstLabelDesc = (UILabel*)[subview viewWithTag:405];
+            
+            [firstLabelDesc setText:[muDict objectForKey:@"description"]];
+            [firstLabelDesc alignTop];
+            
+            firstLabelDesc.lineBreakMode = NSLineBreakByTruncatingTail;
+            
+            //[homeTopTitle setValue:[muDict objectForKey:@"serverID"] forUndefinedKey:@"serverID"];
+            firstPanel.accessibilityLabel = [muDict objectForKey:@"serverID"];
+            [firstPanel addTarget:self action:@selector(panelClick:) forControlEvents:UIControlEventTouchUpInside];
+            
+            if ([[muDict objectForKey:@"hasVideo"] intValue] == 1)
+            {
+                [self addVideoImage:firstImg];
+            }
+        }
+        else
+        {
+            firstPanel.hidden = YES;
+            firstLine.hidden = YES;
+        }
+        if (muArray.count >= 2 && [muArray objectAtIndex:1])
+        {
+            NSMutableDictionary *muDict = [muArray objectAtIndex:1];
+            UIImageView *secondImg = (UIImageView*)[subview viewWithTag:407];
+            //异步加载图片
+            downOperation = [self loadingImageOperation:muDict andImageView:secondImg];
+            if (downOperation != nil)
+            {
+                [thumbDownQueue addOperation:downOperation];
+            }
+            
+            UILabel* secondLabelTitle = (UILabel*)[subview viewWithTag:408];
+            [secondLabelTitle setText:[muDict objectForKey:@"title"]];
+            
+            UILabel* secondLabelTime = (UILabel*)[subview viewWithTag:409];
+            [secondLabelTime setText:[TimeUtil convertTimeFormat:[muDict objectForKey:@"timestamp"]]];
+            
+            UILabel* secondLabelDesc = (UILabel*)[subview viewWithTag:410];
+            [secondLabelDesc setText:[muDict objectForKey:@"description"]];
+            [secondLabelDesc alignTop];
+            secondLabelDesc.lineBreakMode = NSLineBreakByTruncatingTail;
+            
+            secondPanel.accessibilityLabel = [muDict objectForKey:@"serverID"];
+            [secondPanel addTarget:self action:@selector(panelClick:) forControlEvents:UIControlEventTouchUpInside];
+            if ([[muDict objectForKey:@"hasVideo"] intValue] == 1)
+            {
+                [self addVideoImage:secondImg];
+            }
+        }
+        else
+        {
+            secondPanel.hidden = YES;
+            secondLine.hidden = YES;
+        }
+        
+        if (muArray.count >= 3 && [muArray objectAtIndex:2])
+        {
+            NSMutableDictionary *muDict = [muArray objectAtIndex:2];
+            UIImageView *thirdImg = (UIImageView*)[subview viewWithTag:412];
+            //异步加载图片
+            downOperation = [self loadingImageOperation:muDict andImageView:thirdImg];
+            if (downOperation != nil)
+            {
+                [thumbDownQueue addOperation:downOperation];
+            }
+            
+            UILabel* thirdLabelTitle = (UILabel*)[subview viewWithTag:413];
+            [thirdLabelTitle setText:[muDict objectForKey:@"title"]];
+            
+            UILabel* thirdLabelTime = (UILabel*)[subview viewWithTag:414];
+            [thirdLabelTime setText:[TimeUtil convertTimeFormat:[muDict objectForKey:@"timestamp"]]];
+            UILabel* thirdLabelDesc = (UILabel*)[subview viewWithTag:415];
+            [thirdLabelDesc setText:[muDict objectForKey:@"description"]];
+            [thirdLabelDesc alignTop];
+            thirdLabelDesc.lineBreakMode = NSLineBreakByTruncatingTail;
+            
+            thirdPanel.accessibilityLabel = [muDict objectForKey:@"serverID"];
+            [thirdPanel addTarget:self action:@selector(panelClick:) forControlEvents:UIControlEventTouchUpInside];
+            
+            if ([[muDict objectForKey:@"hasVideo"] intValue] == 1)
+            {
+                [self addVideoImage:thirdImg];
+            }
+        }
+        else
+        {
+            thirdPanel.hidden = YES;
+            thirdLine.hidden = YES;
+        }
+        
+        if (muArray.count >= 4 && [muArray objectAtIndex:3])
+        {
+            NSMutableDictionary *muDict = [muArray objectAtIndex:3];
+            UIImageView *fourImg = (UIImageView*)[subview viewWithTag:417];
+            //异步加载图片
+            downOperation = [self loadingImageOperation:muDict andImageView:fourImg];
+            if (downOperation != nil)
+            {
+                [thumbDownQueue addOperation:downOperation];
+            }
+            
+            UILabel* fourLabelTitle = (UILabel*)[subview viewWithTag:418];
+            [fourLabelTitle setText:[muDict objectForKey:@"title"]];
+            UILabel* fourLabelTime = (UILabel*)[subview viewWithTag:419];
+            [fourLabelTime setText:[TimeUtil convertTimeFormat:[muDict objectForKey:@"timestamp"]]];
+            UILabel* fourLabelDesc = (UILabel*)[subview viewWithTag:420];
+            [fourLabelDesc setText:[muDict objectForKey:@"description"]];
+            [fourLabelDesc alignTop];
+            fourLabelDesc.lineBreakMode = NSLineBreakByTruncatingTail;
+            
+            fourPanel.accessibilityLabel = [muDict objectForKey:@"serverID"];
+            [fourPanel addTarget:self action:@selector(panelClick:) forControlEvents:UIControlEventTouchUpInside];
+            
+            if ([[muDict objectForKey:@"hasVideo"] intValue] == 1)
+            {
+                [self addVideoImage:fourImg];
+            }
+        }
+        else
+        {
+            fourPanel.hidden = YES;
+        }
+        
+        [columnScrollView addSubview:subview];
+        
+        [muDistionary setObject:subview forKey:[NSNumber  numberWithInt:(pageNum)]];
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -49,4 +264,8 @@
 }
 */
 
+- (IBAction)pageChange:(id)sender
+{
+    pageControlBeingUsed = YES;
+}
 @end

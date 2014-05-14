@@ -14,21 +14,23 @@
 @interface PopupDetailViewController : GAITrackedViewController
 {
     NSString *serverID;
-    UIButton *backBtn;
-    UIWebView *webView;
-    UIImageView *aniLayer1;
-    UIImageView *aniLayer2;
+  
     NSString *showUrl;
     NSString *videoUrl;
     NSMutableDictionary *urlDict;
     NSMutableArray *videoArray;
+    
+    IBOutlet UIWebView *webView;
+    IBOutlet UIButton *backBtn;
+    IBOutlet UILabel *downloadPercentlabel;
+    IBOutlet UIProgressView *downloadProgress;
 }
-@property (strong, nonatomic) UIWebView *webView;
 @property (weak, nonatomic) id<MJPopupDelegate> delegate;
-@property (strong, nonatomic) UIButton *backBtn;
 @property (strong,nonatomic) NSString *serverID;
+@property (strong,nonatomic) IBOutlet UIWebView *webView;
+@property (strong,nonatomic) IBOutlet UIButton *backBtn;
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil andParams:(NSString *)serverID;
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil andParams:(NSString *)_serverID;
 
 @end
 

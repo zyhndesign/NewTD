@@ -85,10 +85,8 @@
 
 -(void) downloadZipFile:(NSString *) downUrl andArticleId:(NSString *) articleId andTipsAnim:(UIWebView *) webView
 {    
-    UIImageView *aniLayer1 = (UIImageView *)[[webView superview] viewWithTag:912];
-    [aniLayer1 addRotationClockWise:2 andAngle:2.0 andRepeat:100];
-    UIImageView *aniLayer2 = (UIImageView *)[[webView superview] viewWithTag:913];
-    [aniLayer2 addRotationAntiClockWise:2 andAngle:1.0 andRepeat:100];
+    UILabel *percentLabelValue = (UILabel *)[[webView superview] viewWithTag:601];
+    UIProgressView *percentValue = (UIProgressView *)[[webView superview] viewWithTag:602];
     
     //下载zip文件包
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:downUrl]];
@@ -98,12 +96,8 @@
     AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
     operation.outputStream = [NSOutputStream outputStreamToFileAtPath:archivePath append:NO];
     [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
-        NSLog(@"loading zip is success");
-        
-        [aniLayer1.layer removeAnimationForKey:@"transform.rotation.z"];
-        [aniLayer2.layer removeAnimationForKey:@"transform.rotation.z"];
-        aniLayer1.hidden = YES;
-        aniLayer2.hidden = YES;
+        percentLabelValue.hidden = YES;
+        percentValue.hidden = YES;
         
         //解压文件
         BOOL result = FALSE;
@@ -112,7 +106,6 @@
         {
             result = [zip UnzipFileTo:articlesPath overWrite:YES];
             NSString *filePath = [[[[PATH_OF_DOCUMENT stringByAppendingPathComponent:@"articles"] stringByAppendingPathComponent:articleId] stringByAppendingPathComponent:@"doc"] stringByAppendingPathComponent:@"main.html"];
-            NSLog(@"%@",filePath);
             NSURL * url = [NSURL fileURLWithPath:filePath];
             NSURLRequest *request = [NSURLRequest requestWithURL:url];
             [webView loadRequest:request];
