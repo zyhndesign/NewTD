@@ -39,22 +39,18 @@ extern DBUtils *db;
     
     [storyTitleLabel setText:NSLocalizedString(@"storyTitle", nil)];
     
-    int countArticle = [db countByCategory:LANDSCAPE_CATEGORY];
-    countPage = (countArticle / LANDSCAPE_PAGE_INSIDE_NUM);
-    if ((countArticle % LANDSCAPE_PAGE_INSIDE_NUM) > 0)
+    int countArticle = [db countByCategory:STORY_CATEGORY];
+    countPage = (countArticle / STORY_PAGE_INSIDE_NUM);
+    if ((countArticle % STORY_PAGE_INSIDE_NUM) > 0)
     {
         countPage = countPage + 1;
     }
     
-    pageControl = storyPageControl;
-    columnScrollView = storyScrollView;
+    storyScrollView.contentSize = CGSizeMake(storyScrollView.frame.size.width * countPage, storyScrollView.frame.size.height);
+    storyScrollView.delegate = self;
     
-    pageControl = (UIPageControl *)[self.view viewWithTag:331];
-    columnScrollView.contentSize = CGSizeMake(columnScrollView.frame.size.width * countPage, columnScrollView.frame.size.height);
-    columnScrollView.delegate = self;
-    
-    pageControl.currentPage = 0;
-    pageControl.numberOfPages = countPage;
+    storyPageControl.currentPage = 0;
+    storyPageControl.numberOfPages = countPage;
     
     pageControlBeingUsed = NO;
     
@@ -82,10 +78,10 @@ extern DBUtils *db;
     
     CGRect frame;
     
-    UIView *subview = [[bundle loadNibNamed:@"StoryBoard" owner:self options:nil] lastObject];
-    frame.origin.x = columnScrollView.frame.size.width * (pageNum);
+    UIView *subview = [[bundle loadNibNamed:@"StoryContentPanel" owner:self options:nil] lastObject];
+    frame.origin.x = storyScrollView.frame.size.width * (pageNum);
     frame.origin.y = 0;
-    frame.size.width = columnScrollView.frame.size.width;
+    frame.size.width = storyScrollView.frame.size.width;
     frame.size.height = subview.frame.size.height;
     
     NSOperation *downOperation = nil;
@@ -265,7 +261,7 @@ extern DBUtils *db;
             fiveLabelTitle.hidden = YES;
         }
         
-        [columnScrollView addSubview:subview];
+        [storyScrollView addSubview:subview];
         
         [muDistionary setObject:subview forKey:[NSNumber  numberWithInt:(pageNum)]];
     }

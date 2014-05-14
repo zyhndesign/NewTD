@@ -36,22 +36,18 @@ extern DBUtils *db;
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    int countArticle = [db countByCategory:LANDSCAPE_CATEGORY];
-    countPage = (countArticle / LANDSCAPE_PAGE_INSIDE_NUM);
-    if ((countArticle % LANDSCAPE_PAGE_INSIDE_NUM) > 0)
+    int countArticle = [db countByCategory:COMMUNITY_CATEGORY];
+    countPage = (countArticle / COMMUNITY_INSIDE_NUM);
+    if ((countArticle % COMMUNITY_INSIDE_NUM) > 0)
     {
         countPage = countPage + 1;
     }
     
-    pageControl = communityPageControl;
-    columnScrollView = communityScrollView;
+    communityScrollView.contentSize = CGSizeMake(communityScrollView.frame.size.width * countPage, communityScrollView.frame.size.height);
+    communityScrollView.delegate = self;
     
-    pageControl = (UIPageControl *)[self.view viewWithTag:331];
-    columnScrollView.contentSize = CGSizeMake(columnScrollView.frame.size.width * countPage, columnScrollView.frame.size.height);
-    columnScrollView.delegate = self;
-    
-    pageControl.currentPage = 0;
-    pageControl.numberOfPages = countPage;
+    communityPageControl.currentPage = 0;
+    communityPageControl.numberOfPages = countPage;
     
     pageControlBeingUsed = NO;
     
@@ -77,11 +73,11 @@ extern DBUtils *db;
     NSMutableArray * muArray = [db getLandscapeDataByPage:pageNum];
     
     CGRect frame;
-    UIView *subview = [[bundle loadNibNamed:@"LandscapeViewModel_iPad" owner:self options:nil] lastObject];
+    UIView *subview = [[bundle loadNibNamed:@"CommunityContentPanel" owner:self options:nil] lastObject];
     
-    frame.origin.x = columnScrollView.frame.size.width * (pageNum);
+    frame.origin.x = communityScrollView.frame.size.width * (pageNum);
     frame.origin.y = 15;
-    frame.size.width = columnScrollView.frame.size.width;
+    frame.size.width = communityScrollView.frame.size.width;
     frame.size.height = subview.frame.size.height;
     
     NSOperation *downOperation = nil;
@@ -240,7 +236,7 @@ extern DBUtils *db;
             fourPanel.hidden = YES;
         }
         
-        [columnScrollView addSubview:subview];
+        [communityScrollView addSubview:subview];
         
         [muDistionary setObject:subview forKey:[NSNumber  numberWithInt:(pageNum)]];
     }

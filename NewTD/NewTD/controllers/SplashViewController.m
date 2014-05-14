@@ -139,19 +139,19 @@ NSUserDefaults *baseInfo = nil;
                 
                 [muDict setObject:[info objectForKey:@"background"] forKey:@"max_bg_img"];
                 
-                if ([[info objectForKey:@"category"] isEqual:@"1/3"])
+                if ([[info objectForKey:@"category"] isEqual:@"13/14"])
                 {
                     [muDict setObject:[NSNumber numberWithInt:LANDSCAPE_CATEGORY] forKey:@"category"];
                 }
-                else if ([[info objectForKey:@"category"] isEqual:@"1/2"])
+                else if ([[info objectForKey:@"category"] isEqual:@"13/15"])
                 {
                     [muDict setObject:[NSNumber numberWithInt:HUMANITY_CATEGORY] forKey:@"category"];
                 }
-                else if ([[info objectForKey:@"category"] isEqual:@"1/5"])
+                else if ([[info objectForKey:@"category"] isEqual:@"13/16"])
                 {
                     [muDict setObject:[NSNumber numberWithInt:STORY_CATEGORY] forKey:@"category"];
                 }
-                else if ([[info objectForKey:@"category"] isEqual:@"1/4"])
+                else if ([[info objectForKey:@"category"] isEqual:@"13/17"])
                 {
                     [muDict setObject:[NSNumber numberWithInt:COMMUNITY_CATEGORY] forKey:@"category"];
                 }

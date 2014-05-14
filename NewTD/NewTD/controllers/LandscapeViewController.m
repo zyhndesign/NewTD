@@ -44,15 +44,13 @@ extern DBUtils *db;
     {
         countPage = countPage + 1;
     }
+        
+    landscapeScrollView.contentSize = CGSizeMake(landscapeScrollView.frame.size.width * countPage, landscapeScrollView.frame.size.height);
+    landscapeScrollView.delegate = self;
+    landscapeScrollView.backgroundColor = [UIColor clearColor];
     
-    pageControl = landscapePageControll;
-    columnScrollView = landscapeScrollView;
-    
-    columnScrollView.contentSize = CGSizeMake(columnScrollView.frame.size.width * countPage, columnScrollView.frame.size.height);
-    columnScrollView.delegate = self;
-    
-    pageControl.currentPage = 0;
-    pageControl.numberOfPages = countPage;
+    landscapePageControll.currentPage = 0;
+    landscapePageControll.numberOfPages = countPage;
     
     pageControlBeingUsed = NO;
     
@@ -80,9 +78,11 @@ extern DBUtils *db;
     CGRect frame;
     UIView *subview = [[bundle loadNibNamed:@"LandscapeContentPanel" owner:self options:nil] lastObject];
     
-    frame.origin.x = columnScrollView.frame.size.width * (pageNum);
+    subview.backgroundColor = [UIColor clearColor];
+    
+    frame.origin.x = landscapeScrollView.frame.size.width * (pageNum);
     frame.origin.y = 0;
-    frame.size.width = columnScrollView.frame.size.width;
+    frame.size.width = landscapeScrollView.frame.size.width;
     frame.size.height = subview.frame.size.height;
     
     NSOperation *downOperation = nil;

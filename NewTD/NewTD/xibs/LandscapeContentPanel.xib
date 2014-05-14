@@ -19,6 +19,7 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" red="0.4516639113" green="0.4516503811" blue="0.45165804030000001" alpha="1" colorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="105" contentMode="center" fixedFrame="YES" image="default-238" translatesAutoresizingMaskIntoConstraints="NO" id="LPV-f2-hq7">

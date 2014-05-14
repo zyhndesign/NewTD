@@ -38,22 +38,18 @@ extern DBUtils *db;
     // Do any additional setup after loading the view.
     [humanityTitleLabel setText:NSLocalizedString(@"humanityTitle", nil)];
     
-    int countArticle = [db countByCategory:LANDSCAPE_CATEGORY];
-    countPage = (countArticle / LANDSCAPE_PAGE_INSIDE_NUM);
-    if ((countArticle % LANDSCAPE_PAGE_INSIDE_NUM) > 0)
+    int countArticle = [db countByCategory:HUMANITY_CATEGORY];
+    countPage = (countArticle / HUMANITY_PAGE_INSIDE_NUM);
+    if ((countArticle % HUMANITY_PAGE_INSIDE_NUM) > 0)
     {
         countPage = countPage + 1;
     }
     
-    pageControl = humanityPageControl;
-    columnScrollView = humanityScrollView;
+    humanityScrollView.contentSize = CGSizeMake(humanityScrollView.frame.size.width * countPage, humanityScrollView.frame.size.height);
+    humanityScrollView.delegate = self;
     
-    pageControl = (UIPageControl *)[self.view viewWithTag:331];
-    columnScrollView.contentSize = CGSizeMake(columnScrollView.frame.size.width * countPage, columnScrollView.frame.size.height);
-    columnScrollView.delegate = self;
-    
-    pageControl.currentPage = 0;
-    pageControl.numberOfPages = countPage;
+    humanityPageControl.currentPage = 0;
+    humanityPageControl.numberOfPages = countPage;
     
     pageControlBeingUsed = NO;
     
@@ -85,11 +81,11 @@ extern DBUtils *db;
     NSMutableArray * muArray = [db getLandscapeDataByPage:pageNum];
     
     CGRect frame;
-    UIView *subview = [[bundle loadNibNamed:@"LandscapeViewModel_iPad" owner:self options:nil] lastObject];
+    UIView *subview = [[bundle loadNibNamed:@"HumanityContentPanel" owner:self options:nil] lastObject];
     
-    frame.origin.x = columnScrollView.frame.size.width * (pageNum);
+    frame.origin.x = humanityScrollView.frame.size.width * (pageNum);
     frame.origin.y = 15;
-    frame.size.width = columnScrollView.frame.size.width;
+    frame.size.width = humanityScrollView.frame.size.width;
     frame.size.height = subview.frame.size.height;
     
     NSOperation *downOperation = nil;
@@ -242,7 +238,7 @@ extern DBUtils *db;
             fourPanel.hidden = YES;
         }
         
-        [columnScrollView addSubview:subview];
+        [humanityScrollView addSubview:subview];
         
         [muDistionary setObject:subview forKey:[NSNumber  numberWithInt:(pageNum)]];
     }

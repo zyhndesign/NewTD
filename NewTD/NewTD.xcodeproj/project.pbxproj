@@ -58,7 +58,6 @@
 		D5E3C99019205A7D00BB5F7E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D5E3C99219205A7D00BB5F7E /* Localizable.strings */; };
 		D5E3C99519205C8B00BB5F7E /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D5E3C99419205C8B00BB5F7E /* libsqlite3.0.dylib */; };
 		D5E3C99719205C9800BB5F7E /* libz.1.2.5.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D5E3C99619205C9800BB5F7E /* libz.1.2.5.dylib */; };
-		D5E3C99919205CA900BB5F7E /* libxml2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D5E3C99819205CA900BB5F7E /* libxml2.2.dylib */; };
 		D5E3C99B19205CBC00BB5F7E /* libGoogleAnalyticsServices.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D5E3C99A19205CBC00BB5F7E /* libGoogleAnalyticsServices.a */; };
 		D5E3C99D19205CEB00BB5F7E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5E3C99C19205CEB00BB5F7E /* SystemConfiguration.framework */; };
 		D5E3C99F19205CFA00BB5F7E /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5E3C99E19205CFA00BB5F7E /* AudioToolbox.framework */; };
@@ -98,13 +97,14 @@
 		D5E9B50C1922FD4D00DF254B /* UILabel+VerticalAlign.m in Sources */ = {isa = PBXBuildFile; fileRef = D5E9B50B1922FD4D00DF254B /* UILabel+VerticalAlign.m */; };
 		D5E9B5121923283200DF254B /* VideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5E9B5111923283200DF254B /* VideoViewController.m */; };
 		D5E9B5141923286000DF254B /* VideoPlay.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5E9B5131923286000DF254B /* VideoPlay.xib */; };
-		D5E9B518192329C200DF254B /* GDataXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = D5E9B517192329C200DF254B /* GDataXMLNode.m */; };
+		D5E9B518192329C200DF254B /* GDataXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = D5E9B517192329C200DF254B /* GDataXMLNode.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		D5E9B51E19233E0200DF254B /* 404.css in Resources */ = {isa = PBXBuildFile; fileRef = D5E9B51A19233E0200DF254B /* 404.css */; };
 		D5E9B51F19233E0200DF254B /* 404.html in Resources */ = {isa = PBXBuildFile; fileRef = D5E9B51B19233E0200DF254B /* 404.html */; };
 		D5E9B52319233E5200DF254B /* 404-1.png in Resources */ = {isa = PBXBuildFile; fileRef = D5E9B52219233E5200DF254B /* 404-1.png */; };
 		D5E9B5261923423300DF254B /* DownloadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5E9B5251923423300DF254B /* DownloadViewController.m */; };
-		D5E9B5301923534700DF254B /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = D5E9B52F1923534700DF254B /* JSONKit.m */; };
+		D5E9B5301923534700DF254B /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = D5E9B52F1923534700DF254B /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		D5E9B532192354A700DF254B /* download_zh.plist in Resources */ = {isa = PBXBuildFile; fileRef = D5E9B531192354A700DF254B /* download_zh.plist */; };
+		D5E9B53719235DD400DF254B /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D5E9B53619235DD400DF254B /* libxml2.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -278,6 +278,7 @@
 		D5E9B52E1923534700DF254B /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
 		D5E9B52F1923534700DF254B /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
 		D5E9B531192354A700DF254B /* download_zh.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = download_zh.plist; sourceTree = "<group>"; };
+		D5E9B53619235DD400DF254B /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -285,11 +286,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5E9B53719235DD400DF254B /* libxml2.dylib in Frameworks */,
 				D5E3C9A119205D0200BB5F7E /* CoreData.framework in Frameworks */,
 				D5E3C99F19205CFA00BB5F7E /* AudioToolbox.framework in Frameworks */,
 				D5E3C99D19205CEB00BB5F7E /* SystemConfiguration.framework in Frameworks */,
 				D5E3C99B19205CBC00BB5F7E /* libGoogleAnalyticsServices.a in Frameworks */,
-				D5E3C99919205CA900BB5F7E /* libxml2.2.dylib in Frameworks */,
 				D5E3C99719205C9800BB5F7E /* libz.1.2.5.dylib in Frameworks */,
 				D5E3C99519205C8B00BB5F7E /* libsqlite3.0.dylib in Frameworks */,
 				D58DA440191B5F3000D900DE /* CoreGraphics.framework in Frameworks */,
@@ -333,6 +334,7 @@
 		D58DA43C191B5F3000D900DE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D5E9B53619235DD400DF254B /* libxml2.dylib */,
 				D5E3C9A019205D0200BB5F7E /* CoreData.framework */,
 				D5E3C99E19205CFA00BB5F7E /* AudioToolbox.framework */,
 				D5E3C99C19205CEB00BB5F7E /* SystemConfiguration.framework */,
@@ -965,14 +967,22 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = /usr/lib/libxml2.dylib;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NewTD/NewTD-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SDKROOT)/usr/include/libxml2",
+				);
 				INFOPLIST_FILE = "NewTD/NewTD-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Volumes/MAC_DATA/第三方组件/GoogleAnalyticsServicesiOS_3.06",
+					"$(SDKROOT)/usr/include/libxml2",
 				);
+				OTHER_LDFLAGS = "-lxml2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -983,14 +993,22 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = /usr/lib/libxml2.dylib;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NewTD/NewTD-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SDKROOT)/usr/include/libxml2",
+				);
 				INFOPLIST_FILE = "NewTD/NewTD-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Volumes/MAC_DATA/第三方组件/GoogleAnalyticsServicesiOS_3.06",
+					"$(SDKROOT)/usr/include/libxml2",
 				);
+				OTHER_LDFLAGS = "-lxml2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

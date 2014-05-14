@@ -17,6 +17,11 @@
 
 @implementation HomeViewController
 
+@synthesize columnBigBg,firstViewPanel,firstArticleTitle,firstArticleTime;
+@synthesize secondViewPanel,secondArticleTimeLabel,secondArticleThumb,secondArticleTitleLabel,secondArticleSummaryLabel;
+@synthesize threeViewPanel,threeArticleTimeLabel,threeArticleThumb,threeArticleTitleLabel,threeArticleSummaryLabel;
+@synthesize fourViewPanel,fourArticleTimeLabel,fourArticleThumb,fourArticleTitleLabel,fourArticleSummaryLabel;
+
 extern DBUtils *db;
 FileUtils *fileUtils;
 PopupDetailViewController* detailViewController;
@@ -38,6 +43,7 @@ PopupDetailViewController* detailViewController;
     fileUtils = [FileUtils new];
     [fileUtils createAppFilesDir];
     
+    firstViewPanel.backgroundColor = [UIColor clearColor];
 }
 
 - (void)didReceiveMemoryWarning

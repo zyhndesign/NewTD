@@ -10,7 +10,7 @@
             <rect key="frame" x="0.0" y="0.0" width="1024" height="430"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="302" contentMode="center" fixedFrame="YES" image="default-420" translatesAutoresizingMaskIntoConstraints="NO" id="Igd-Wk-GSs">
+                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="302" contentMode="scaleToFill" fixedFrame="YES" image="default-420" translatesAutoresizingMaskIntoConstraints="NO" id="Igd-Wk-GSs">
                     <rect key="frame" x="113" y="26" width="380" height="380"/>
                     <autoresizingMask key="autoresizingMask"/>
                 </imageView>

@@ -35,4 +35,17 @@
  *  @param view UIView对象
  */
 -(void) addVideoImage:(UIView *)view;
+
+/**
+ *  ScrollView中文章点击查看详情事件
+ *
+ *  @param sender <#sender description#>
+ */
+- (void)panelClick:(id)sender;
+
+/**
+ *  关闭详情界面事件
+ */
+- (void) closeButtonClicked;
+
 @end
