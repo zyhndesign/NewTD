@@ -68,8 +68,7 @@
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
-                        <action selector="musicNextBtn:" destination="-1" eventType="touchUpInside" id="zr5-t0-mDo"/>
-                        <action selector="musicNextBtnClick:" destination="-1" eventType="touchUpInside" id="fhM-u9-rKN"/>
+                        <action selector="musicNextBtnClick:" destination="-1" eventType="touchUpInside" id="201-it-Jb6"/>
                     </connections>
                 </button>
             </subviews>

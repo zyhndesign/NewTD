@@ -56,6 +56,10 @@ extern DBUtils *db;
     [musicNextBtn setBackgroundImage:[UIImage imageNamed:@"musicBtnNextNormal"] forState:UIControlStateNormal];
     [musicNextBtn setBackgroundImage:[UIImage imageNamed:@"musicBtnNextPressed"] forState:UIControlStateSelected];
     
+    musicLoadIndicator.hidden = YES;
+    
+    musicProgressView.progress = 0;
+    
     musicArray = [NSMutableArray new];
     [self loadMusicPlayMusic];
 }
@@ -79,7 +83,7 @@ extern DBUtils *db;
 
 - (IBAction)musicPreviousBtnClick:(id)sender
 {
-    
+    [self previous];
 }
 
 - (IBAction)musicPlayOrPauseBtnClick:(id)sender

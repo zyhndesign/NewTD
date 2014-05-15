@@ -107,7 +107,7 @@
 		D5E9B53719235DD400DF254B /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D5E9B53619235DD400DF254B /* libxml2.dylib */; };
 		D5EDE6A419248F90008D571E /* MusicPlayerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5EDE6A319248F90008D571E /* MusicPlayerView.xib */; };
 		D5EDE6A719249194008D571E /* MusicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5EDE6A619249194008D571E /* MusicViewController.m */; };
-		D5EDE6AB1924AC84008D571E /* AudioStreamer.m in Sources */ = {isa = PBXBuildFile; fileRef = D5EDE6AA1924AC84008D571E /* AudioStreamer.m */; };
+		D5EDE6AB1924AC84008D571E /* AudioStreamer.m in Sources */ = {isa = PBXBuildFile; fileRef = D5EDE6AA1924AC84008D571E /* AudioStreamer.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */

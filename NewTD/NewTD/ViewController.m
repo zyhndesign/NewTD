@@ -40,6 +40,8 @@
     // Send the screen view.
     [[GAI sharedInstance].defaultTracker send:[[GAIDictionaryBuilder createAppView] build]];
     
+    mainScrollView.backgroundColor = [UIColor blackColor];
+    
     CGRect screenBounds = [[UIScreen mainScreen]bounds];
     
     NSBundle* mainBundle = [NSBundle mainBundle];
