@@ -101,6 +101,10 @@ extern DBUtils *db;
         UIControl *thirdPanel = (UIControl*)[subview viewWithTag:211];
         UIControl *fourPanel = (UIControl*)[subview viewWithTag:216];
         
+        UIView *lineOneView = (UIView *)[subview viewWithTag:330];
+        UIView *lineTwoView = (UIView *)[subview viewWithTag:331];
+        UIView *lineThreeView = (UIView *)[subview viewWithTag:332];
+        
         subview.frame = frame;
         
         //根据数据加载subview
@@ -139,6 +143,7 @@ extern DBUtils *db;
         else
         {
             firstPanel.hidden = YES;
+            lineOneView.hidden = YES;
         }
         
         if (muArray.count >= 2 && [muArray objectAtIndex:1])
@@ -173,6 +178,7 @@ extern DBUtils *db;
         else
         {
             secondPanel.hidden = YES;
+            lineTwoView.hidden = YES;
         }
         
         if (muArray.count >= 3 && [muArray objectAtIndex:2])
@@ -207,6 +213,7 @@ extern DBUtils *db;
         else
         {
             thirdPanel.hidden = YES;
+            lineThreeView.hidden = YES;
         }
         
         if (muArray.count >= 4 && [muArray objectAtIndex:3])
