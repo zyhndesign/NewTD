@@ -28,8 +28,18 @@
 //删除指定文件夹
 -(BOOL) deleteDir:(NSString *)dirString;
 
-//下载zip包解压到指定目录
--(void) downloadZipFile:(NSString *) downUrl andArticleId:(NSString *) articleId andTipsAnim:(UIWebView *) webView;
+/**
+ *  下载zip包解压到指定目录
+ *
+ *  @param downUrl   文件地址
+ *  @param articleId 文章ID
+ *  @param webView
+ *  @param fileSize 文件大小
+ */
+-(void) downloadZipFile:(NSString *) downUrl
+           andArticleId:(NSString *) articleId
+            andTipsAnim:(UIWebView *) webView
+            andFileSize:(long long)fileSize;
 
 //禁止备份到icloud
 - (BOOL)addSkipBackupAttributeToItemAtURL:(NSURL *)URL;

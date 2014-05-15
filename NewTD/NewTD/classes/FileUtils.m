@@ -83,7 +83,10 @@
     return [fileManager removeItemAtPath:dirString error:nil];
 }
 
--(void) downloadZipFile:(NSString *) downUrl andArticleId:(NSString *) articleId andTipsAnim:(UIWebView *) webView
+-(void) downloadZipFile:(NSString *) downUrl
+           andArticleId:(NSString *) articleId
+            andTipsAnim:(UIWebView *) webView
+            andFileSize:(long long)fileSize
 {    
     UILabel *percentLabelValue = (UILabel *)[[webView superview] viewWithTag:601];
     UIProgressView *percentValue = (UIProgressView *)[[webView superview] viewWithTag:602];
@@ -94,6 +97,8 @@
     NSString *articlesPath = [PATH_OF_DOCUMENT stringByAppendingPathComponent:@"articles"];
                               
     AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
+    
+    
     operation.outputStream = [NSOutputStream outputStreamToFileAtPath:archivePath append:NO];
     [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
         percentLabelValue.hidden = YES;
@@ -129,8 +134,15 @@
         NSLog(@"loading zip is failure %@",[error description]);
         
     }];
+    [operation setDownloadProgressBlock:^(NSUInteger bytesRead, long long totalBytesRead, long long totalBytesExpectedToRead) {
+       
+        float percent = ((float)totalBytesRead)/(float)fileSize * 100;
+        [percentLabelValue setText:[NSString stringWithFormat:@"%0.2f%%",percent]];
+        percentValue.progress = ((float)totalBytesRead)/(float)fileSize;
+    }];
+    
     [operation start];
-
+    
 }
 
 - (BOOL)addSkipBackupAttributeToItemAtURL:(NSURL*)URL

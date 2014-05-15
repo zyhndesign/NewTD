@@ -65,6 +65,9 @@ VideoViewController *videoViewController = nil;
     backBtn.alpha = 1;
     //[NSURL fileURLWithPath:]
     NSLog(@"get article id is :%@",self.serverID);
+    downloadProgress.progress = 0;
+    [downloadPercentlabel setText:@"0%"];
+    
     
     if (nil != self.serverID)
     {
@@ -85,11 +88,16 @@ VideoViewController *videoViewController = nil;
             NSURL * url = [NSURL fileURLWithPath:filePath];
             NSURLRequest *request = [NSURLRequest requestWithURL:url];
             [webView loadRequest:request];
-            
+            downloadProgress.progress = 1;
+            downloadProgress.hidden = YES;
+            [downloadPercentlabel setText:@"100%"];
         }
         else
         {
             NSLog(@"loading remote file...");
+            //获取文件大小
+            NSDictionary *dict = [db queryByServerID:serverID];
+            
             //UIAlertView *downloadTips = [[UIAlertView alloc] initWithTitle:@"下载文件" message:@"正在加载中..." delegate:self cancelButtonTitle:nil otherButtonTitles:nil];
             UIAlertView *articleTips = [[UIAlertView alloc] initWithTitle:@"提醒" message:@"该文件没有离线保存，需要打开网络下载" delegate:self cancelButtonTitle:@"确认" otherButtonTitles:nil];
             NSString *url = [db getDownUrlByServerId:serverID];
@@ -101,11 +109,11 @@ VideoViewController *videoViewController = nil;
                     break;
                 case ReachableViaWWAN: //use 3g network
                     NSLog(@"3g network....");
-                    [fileUtils downloadZipFile:url andArticleId:self.serverID andTipsAnim:webView];
+                    [fileUtils downloadZipFile:url andArticleId:self.serverID andTipsAnim:webView andFileSize:[[dict objectForKey:@"size"] longLongValue]];
                     break;
                 case ReachableViaWiFi: //use wifi network
                     NSLog(@"wifi network....");
-                    [fileUtils downloadZipFile:url andArticleId:self.serverID andTipsAnim:webView];
+                    [fileUtils downloadZipFile:url andArticleId:self.serverID andTipsAnim:webView andFileSize:[[dict objectForKey:@"size"] longLongValue]];
                     break;
                 default:
                     
