@@ -136,9 +136,9 @@
     }];
     [operation setDownloadProgressBlock:^(NSUInteger bytesRead, long long totalBytesRead, long long totalBytesExpectedToRead) {
        
-        float percent = ((float)totalBytesRead)/(float)fileSize * 100;
-        [percentLabelValue setText:[NSString stringWithFormat:@"%0.2f%%",percent]];
-        percentValue.progress = ((float)totalBytesRead)/(float)fileSize;
+        float percent = ((float)totalBytesRead)/(float)fileSize;
+        [percentLabelValue setText:[NSString stringWithFormat:@"%0.2f%%",percent  * 100]];
+        percentValue.progress = percent;
     }];
     
     [operation start];
