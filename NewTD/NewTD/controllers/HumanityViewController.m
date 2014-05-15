@@ -101,9 +101,9 @@ extern DBUtils *db;
         UIControl *thirdPanel = (UIControl*)[subview viewWithTag:211];
         UIControl *fourPanel = (UIControl*)[subview viewWithTag:216];
         
-        UIView *lineOneView = (UIView *)[subview viewWithTag:330];
-        UIView *lineTwoView = (UIView *)[subview viewWithTag:331];
-        UIView *lineThreeView = (UIView *)[subview viewWithTag:332];
+        UIView *lineOneView = (UIView *)[subview viewWithTag:230];
+        UIView *lineTwoView = (UIView *)[subview viewWithTag:231];
+        UIView *lineThreeView = (UIView *)[subview viewWithTag:232];
         
         subview.frame = frame;
         
