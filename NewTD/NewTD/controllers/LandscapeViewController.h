@@ -12,14 +12,9 @@
 {
     IBOutlet UILabel *landscapeTitleLabel;
     
-    IBOutlet UIScrollView *landscapeScrollView;
-    
-    IBOutlet UIPageControl *landscapePageControll;
 }
 
 @property (strong, nonatomic) IBOutlet UILabel *landscapeTitleLabel;
-@property (strong, nonatomic) IBOutlet UIScrollView *landscapeScrollView;
-@property (strong, nonatomic) IBOutlet IBOutlet UIPageControl *landscapePageControll;
 
 - (IBAction)changePage:(id)sender;
 

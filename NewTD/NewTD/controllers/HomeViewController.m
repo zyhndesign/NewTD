@@ -10,8 +10,11 @@
 #import "../classes/DBUtils.h"
 #import "PopupDetailViewController.h"
 #import "../classes/FileUtils.h"
+#import "../libs/MJPopup/UIViewController+MJPopupViewController.h"
+#import "../classes/UILabel+VerticalAlign.h"
+#import "../classes/TimeUtil.h"
 
-@interface HomeViewController ()
+@interface HomeViewController ()<MJPopupDelegate>
 
 @end
 
@@ -44,6 +47,108 @@ PopupDetailViewController* detailViewController;
     [fileUtils createAppFilesDir];
     
     firstViewPanel.backgroundColor = [UIColor clearColor];
+    
+    [firstViewPanel addTarget:self action:@selector(panelClick:) forControlEvents:UIControlEventTouchUpInside];
+    [secondViewPanel addTarget:self action:@selector(panelClick:) forControlEvents:UIControlEventTouchUpInside];
+    [threeViewPanel addTarget:self action:@selector(panelClick:) forControlEvents:UIControlEventTouchUpInside];
+    [fourViewPanel addTarget:self action:@selector(panelClick:) forControlEvents:UIControlEventTouchUpInside];
+    
+    thumbDownQueue = [NSOperationQueue new];
+    [thumbDownQueue setMaxConcurrentOperationCount:1];
+    
+    db = [[DBUtils alloc] init];
+    NSMutableArray *muArray = [db queryHeadline];
+    
+    
+    NSOperation *downOperation = nil;
+    
+    if ([muArray count] >= 1)
+    {
+        NSMutableDictionary *muDict = [muArray objectAtIndex:1];
+        [firstArticleTitle setText:[muDict objectForKey:@"title"]];
+        firstArticleTime.textAlignment = NSTextAlignmentCenter;
+        [firstArticleTime setText:[TimeUtil convertTimeFormat:[muDict objectForKey:@"timestamp"]]];
+    }
+    
+    if ([muArray count] >= 2)
+    {
+        NSMutableDictionary *muDict = [muArray objectAtIndex:1];
+        downOperation = [self loadingImageOperation:muDict andImageView:secondArticleThumb];
+        if (downOperation != nil)
+        {
+            [thumbDownQueue addOperation:downOperation];
+        }
+        [secondArticleTitleLabel setText:[muDict objectForKey:@"title"]];
+        [secondArticleTitleLabel alignTop];
+        secondArticleTimeLabel.textAlignment = NSTextAlignmentCenter;
+        [secondArticleTimeLabel setText:[TimeUtil convertTimeFormat:[muDict objectForKey:@"timestamp"]]];
+        
+        [secondArticleSummaryLabel setText:[muDict objectForKey:@"description"]];
+        [secondArticleSummaryLabel alignTop];
+        
+        secondViewPanel.accessibilityLabel = [muDict objectForKey:@"serverID"];
+        
+        if ([[muDict objectForKey:@"hasVideo"] intValue] == 1)
+        {
+            [self addVideoImage:secondViewPanel];
+        }
+    }
+    else
+    {
+        secondViewPanel.hidden = YES;
+    }
+    
+    if ([muArray count] >= 3)
+    {
+        NSMutableDictionary *muDict = [muArray objectAtIndex:2];
+        downOperation = [self loadingImageOperation:muDict andImageView:threeArticleThumb];
+        if (downOperation != nil)
+        {
+            [thumbDownQueue addOperation:downOperation];
+        }
+        
+        [threeArticleTitleLabel setText:[muDict objectForKey:@"title"]];
+        [threeArticleTitleLabel alignTop];
+        threeArticleTimeLabel.textAlignment = NSTextAlignmentCenter;
+        [threeArticleTimeLabel setText:[TimeUtil convertTimeFormat:[muDict objectForKey:@"timestamp"]]];
+        [threeArticleSummaryLabel setText:[muDict objectForKey:@"description"]];
+        [threeArticleSummaryLabel alignTop];
+        
+        threeViewPanel.accessibilityLabel = [muDict objectForKey:@"serverID"];
+        if ([[muDict objectForKey:@"hasVideo"] intValue] == 1)
+        {
+            [self addVideoImage:threeViewPanel];
+        }
+    }
+    else
+    {
+        threeViewPanel.hidden = YES;
+    }
+    
+    if ([muArray count] >= 4)
+    {
+        NSMutableDictionary *muDict = [muArray objectAtIndex:3];
+        downOperation = [self loadingImageOperation:muDict andImageView:fourArticleThumb];
+        if (downOperation != nil)
+        {
+            [thumbDownQueue addOperation:downOperation];
+        }
+        [fourArticleTitleLabel setText:[muDict objectForKey:@"title"]];
+        [fourArticleTitleLabel alignTop];
+        fourArticleTimeLabel.textAlignment = NSTextAlignmentCenter;
+        [fourArticleTimeLabel setText:[TimeUtil convertTimeFormat:[muDict objectForKey:@"timestamp"]]];
+        [fourArticleSummaryLabel setText:[muDict objectForKey:@"description"]];
+        [fourArticleSummaryLabel alignTop];
+        fourViewPanel.accessibilityLabel = [muDict objectForKey:@"serverID"];
+        if ([[muDict objectForKey:@"hasVideo"] intValue] == 1)
+        {
+            [self addVideoImage:fourViewPanel];
+        }
+    }
+    else
+    {
+        fourViewPanel.hidden = YES;
+    }
 }
 
 - (void)didReceiveMemoryWarning

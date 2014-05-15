@@ -19,7 +19,7 @@
 
 @implementation HumanityViewController
 
-@synthesize humanityTitleLabel, humanityScrollView,humanityPageControl;
+@synthesize humanityTitleLabel;
 
 extern DBUtils *db;
 
@@ -45,11 +45,15 @@ extern DBUtils *db;
         countPage = countPage + 1;
     }
     
-    humanityScrollView.contentSize = CGSizeMake(humanityScrollView.frame.size.width * countPage, humanityScrollView.frame.size.height);
-    humanityScrollView.delegate = self;
+    columnScrollView = (UIScrollView *)[self.view viewWithTag:150];
+    pageControl = (UIPageControl *)[self.view viewWithTag:151];
     
-    humanityPageControl.currentPage = 0;
-    humanityPageControl.numberOfPages = countPage;
+    columnScrollView.contentSize = CGSizeMake(columnScrollView.frame.size.width * countPage, columnScrollView.frame.size.height);
+    columnScrollView.delegate = self;
+    columnScrollView.backgroundColor = [UIColor clearColor];
+    
+    pageControl.currentPage = 0;
+    pageControl.numberOfPages = countPage;
     
     pageControlBeingUsed = NO;
     
@@ -78,14 +82,14 @@ extern DBUtils *db;
 -(void) assemblePanel:(int) pageNum
 {
     NSBundle *bundle = [NSBundle mainBundle];
-    NSMutableArray * muArray = [db getLandscapeDataByPage:pageNum];
+    NSMutableArray * muArray = [db getHumanityDataByPage:pageNum];
     
     CGRect frame;
     UIView *subview = [[bundle loadNibNamed:@"HumanityContentPanel" owner:self options:nil] lastObject];
     
-    frame.origin.x = humanityScrollView.frame.size.width * (pageNum);
+    frame.origin.x = columnScrollView.frame.size.width * (pageNum);
     frame.origin.y = 15;
-    frame.size.width = humanityScrollView.frame.size.width;
+    frame.size.width = columnScrollView.frame.size.width;
     frame.size.height = subview.frame.size.height;
     
     NSOperation *downOperation = nil;
@@ -238,7 +242,7 @@ extern DBUtils *db;
             fourPanel.hidden = YES;
         }
         
-        [humanityScrollView addSubview:subview];
+        [columnScrollView addSubview:subview];
         
         [muDistionary setObject:subview forKey:[NSNumber  numberWithInt:(pageNum)]];
     }
@@ -255,4 +259,8 @@ extern DBUtils *db;
 }
 */
 
+- (IBAction)pageChange:(id)sender
+{
+     pageControlBeingUsed = YES;
+}
 @end

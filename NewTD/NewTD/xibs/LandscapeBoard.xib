@@ -6,8 +6,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LandscapeViewController">
             <connections>
-                <outlet property="landscapePageControll" destination="XFa-fO-YMR" id="mrf-Hq-ryW"/>
-                <outlet property="landscapeScrollView" destination="obN-Y8-8ZQ" id="pjF-hy-mjn"/>
                 <outlet property="landscapeTitleLabel" destination="2O3-2O-onD" id="8yY-fC-SNu"/>
                 <outlet property="view" destination="mpC-kv-L9D" id="7g9-q0-AHV"/>
             </connections>
@@ -33,7 +31,7 @@
                     <rect key="frame" x="0.0" y="580" width="1024" height="200"/>
                     <autoresizingMask key="autoresizingMask"/>
                 </imageView>
-                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="obN-Y8-8ZQ">
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" tag="150" contentMode="scaleToFill" fixedFrame="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="obN-Y8-8ZQ">
                     <rect key="frame" x="0.0" y="768" width="1024" height="500"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                 </scrollView>
@@ -48,7 +46,7 @@
                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="XFa-fO-YMR">
+                <pageControl opaque="NO" tag="151" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="XFa-fO-YMR">
                     <rect key="frame" x="493" y="1279" width="39" height="37"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <connections>

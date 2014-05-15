@@ -441,7 +441,7 @@ NSString* path = nil;
 -(NSMutableArray *) getStoryDataByPage:(int)currentPage
 {
     int offsetNum = currentPage * STORY_PAGE_INSIDE_NUM;
-    NSString *sql = [[[[[@"select serverID,title,profile_path,hasVideo from contentlist where category = " stringByAppendingFormat:@"%d", STORY_CATEGORY] stringByAppendingString:@" order by post_date desc limit " ] stringByAppendingFormat:@"%d", STORY_PAGE_INSIDE_NUM ] stringByAppendingString:@" Offset " ] stringByAppendingFormat:@"%d",offsetNum] ;
+    NSString *sql = [[[[[@"select serverID,title,profile_path,hasVideo,description from contentlist where category = " stringByAppendingFormat:@"%d", STORY_CATEGORY] stringByAppendingString:@" order by post_date desc limit " ] stringByAppendingFormat:@"%d", STORY_PAGE_INSIDE_NUM ] stringByAppendingString:@" Offset " ] stringByAppendingFormat:@"%d",offsetNum] ;
     FMDatabase* db = [FMDatabase databaseWithPath:path];
     NSMutableArray* muArray = [NSMutableArray new];
     if ([db open])
@@ -453,6 +453,7 @@ NSString* path = nil;
             muDict = [NSMutableDictionary new];
             [muDict setValue:[rs stringForColumn:@"serverID"] forKey:@"serverID"];
             [muDict setValue:[rs stringForColumn:@"title"] forKey:@"title"];
+            [muDict setValue:[rs stringForColumn:@"description"] forKey:@"description"];
             [muDict setValue:[rs stringForColumn:@"profile_path"] forKey:@"profile_path"];
             [muDict setValue:[NSNumber numberWithInt:[rs intForColumn:@"hasVideo"]] forKey:@"hasVideo"];
             [muArray addObject:muDict];

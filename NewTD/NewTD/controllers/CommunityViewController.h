@@ -11,17 +11,8 @@
 @interface CommunityViewController : ColumnViewController
 {
     IBOutlet UILabel *communityTitleLabel;
-    
-    IBOutlet UIScrollView *communityScrollView;
-    
-    IBOutlet UIPageControl *communityPageControl;
-    
 }
 @property (strong, nonatomic) IBOutlet UILabel *communityTitleLabel;
-
-@property (strong, nonatomic) IBOutlet UIScrollView *communityScrollView;
-
-@property (strong, nonatomic) IBOutlet UIPageControl *communityPageControl;
 
 - (IBAction)pageChange:(id)sender;
 

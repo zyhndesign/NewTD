@@ -19,7 +19,7 @@
 
 @implementation LandscapeViewController
 
-@synthesize landscapeTitleLabel, landscapeScrollView, landscapePageControll;
+@synthesize landscapeTitleLabel;
 
 extern DBUtils *db;
 
@@ -44,13 +44,16 @@ extern DBUtils *db;
     {
         countPage = countPage + 1;
     }
-        
-    landscapeScrollView.contentSize = CGSizeMake(landscapeScrollView.frame.size.width * countPage, landscapeScrollView.frame.size.height);
-    landscapeScrollView.delegate = self;
-    landscapeScrollView.backgroundColor = [UIColor clearColor];
     
-    landscapePageControll.currentPage = 0;
-    landscapePageControll.numberOfPages = countPage;
+    columnScrollView = (UIScrollView *)[self.view viewWithTag:150];
+    pageControl = (UIPageControl *)[self.view viewWithTag:151];
+    
+    columnScrollView.contentSize = CGSizeMake(columnScrollView.frame.size.width * countPage, columnScrollView.frame.size.height);
+    columnScrollView.delegate = self;
+    columnScrollView.backgroundColor = [UIColor clearColor];
+    
+    pageControl.currentPage = 0;
+    pageControl.numberOfPages = countPage;
     
     pageControlBeingUsed = NO;
     
@@ -80,9 +83,9 @@ extern DBUtils *db;
     
     subview.backgroundColor = [UIColor clearColor];
     
-    frame.origin.x = landscapeScrollView.frame.size.width * (pageNum);
+    frame.origin.x = columnScrollView.frame.size.width * (pageNum);
     frame.origin.y = 0;
-    frame.size.width = landscapeScrollView.frame.size.width;
+    frame.size.width = columnScrollView.frame.size.width;
     frame.size.height = subview.frame.size.height;
     
     NSOperation *downOperation = nil;
@@ -287,7 +290,7 @@ extern DBUtils *db;
             sixLabelTitle.hidden = YES;
         }
         
-        [landscapeScrollView addSubview:subview];
+        [columnScrollView addSubview:subview];
         
         [muDistionary setObject:subview forKey:[NSNumber  numberWithInt:(pageNum)]];
     }

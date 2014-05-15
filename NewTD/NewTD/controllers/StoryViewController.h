@@ -11,15 +11,8 @@
 @interface StoryViewController : ColumnViewController
 {
     IBOutlet UILabel *storyTitleLabel;
-    
-    IBOutlet UIScrollView *storyScrollView;
-    
-    IBOutlet UIPageControl *storyPageControl;
 }
 @property (strong, nonatomic) IBOutlet UILabel *storyTitleLabel;
-@property (strong, nonatomic) IBOutlet UIScrollView *storyScrollView;
-
-@property (strong, nonatomic) IBOutlet UIPageControl *storyPageControl;
 
 - (IBAction)changePage:(id)sender;
 

@@ -19,7 +19,7 @@
 
 @implementation StoryViewController
 
-@synthesize storyTitleLabel, storyScrollView, storyPageControl;
+@synthesize storyTitleLabel;
 
 extern DBUtils *db;
 
@@ -46,11 +46,15 @@ extern DBUtils *db;
         countPage = countPage + 1;
     }
     
-    storyScrollView.contentSize = CGSizeMake(storyScrollView.frame.size.width * countPage, storyScrollView.frame.size.height);
-    storyScrollView.delegate = self;
+    columnScrollView = (UIScrollView *)[self.view viewWithTag:150];
+    pageControl = (UIPageControl *)[self.view viewWithTag:151];
     
-    storyPageControl.currentPage = 0;
-    storyPageControl.numberOfPages = countPage;
+    columnScrollView.contentSize = CGSizeMake(columnScrollView.frame.size.width * countPage, columnScrollView.frame.size.height);
+    columnScrollView.delegate = self;
+    columnScrollView.backgroundColor = [UIColor clearColor];
+    
+    pageControl.currentPage = 0;
+    pageControl.numberOfPages = countPage;
     
     pageControlBeingUsed = NO;
     
@@ -79,9 +83,9 @@ extern DBUtils *db;
     CGRect frame;
     
     UIView *subview = [[bundle loadNibNamed:@"StoryContentPanel" owner:self options:nil] lastObject];
-    frame.origin.x = storyScrollView.frame.size.width * (pageNum);
+    frame.origin.x = columnScrollView.frame.size.width * (pageNum);
     frame.origin.y = 0;
-    frame.size.width = storyScrollView.frame.size.width;
+    frame.size.width = columnScrollView.frame.size.width;
     frame.size.height = subview.frame.size.height;
     
     NSOperation *downOperation = nil;
@@ -261,7 +265,7 @@ extern DBUtils *db;
             fiveLabelTitle.hidden = YES;
         }
         
-        [storyScrollView addSubview:subview];
+        [columnScrollView addSubview:subview];
         
         [muDistionary setObject:subview forKey:[NSNumber  numberWithInt:(pageNum)]];
     }

@@ -12,24 +12,24 @@
 {
 
     IBOutlet UIImageView *columnBigBg;
-    IBOutlet UIView *firstViewPanel;
+    IBOutlet UIControl *firstViewPanel;
     IBOutlet UILabel *firstArticleTitle;
     IBOutlet UILabel *firstArticleTime;
     
     
-    IBOutlet UIView *secondViewPanel;
+    IBOutlet UIControl *secondViewPanel;
     IBOutlet UILabel *secondArticleTimeLabel;
     IBOutlet UIImageView *secondArticleThumb;
     IBOutlet UILabel *secondArticleTitleLabel;
     IBOutlet UILabel *secondArticleSummaryLabel;
     
-    IBOutlet UIView *threeViewPanel;
+    IBOutlet UIControl *threeViewPanel;
     IBOutlet UILabel *threeArticleTimeLabel;
     IBOutlet UIImageView *threeArticleThumb;
     IBOutlet UILabel *threeArticleTitleLabel;
     IBOutlet UILabel *threeArticleSummaryLabel;
     
-    IBOutlet UIView *fourViewPanel;
+    IBOutlet UIControl *fourViewPanel;
     IBOutlet UILabel *fourArticleTimeLabel;
     IBOutlet UIImageView *fourArticleThumb;
     IBOutlet UILabel *fourArticleTitleLabel;

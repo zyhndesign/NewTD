@@ -11,12 +11,8 @@
 @interface HumanityViewController : ColumnViewController
 {
     IBOutlet UILabel *humanityTitleLabel;
-    
-    IBOutlet UIScrollView *humanityScrollView;
-    
-    IBOutlet UIPageControl *humanityPageControl;
 }
 @property (strong, nonatomic) IBOutlet UILabel *humanityTitleLabel;
-@property (strong, nonatomic) IBOutlet UIScrollView *humanityScrollView;
-@property (strong, nonatomic) IBOutlet UIPageControl *humanityPageControl;
+
+- (IBAction)pageChange:(id)sender;
 @end
