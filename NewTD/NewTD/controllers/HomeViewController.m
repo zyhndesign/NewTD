@@ -68,6 +68,7 @@ PopupDetailViewController* detailViewController;
         [firstArticleTitle setText:[muDict objectForKey:@"title"]];
         firstArticleTime.textAlignment = NSTextAlignmentCenter;
         [firstArticleTime setText:[TimeUtil convertTimeFormat:[muDict objectForKey:@"timestamp"]]];
+        firstViewPanel.accessibilityLabel = [muDict objectForKey:@"serverID"];
     }
     
     if ([muArray count] >= 2)
