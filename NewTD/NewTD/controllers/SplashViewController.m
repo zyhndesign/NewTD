@@ -74,7 +74,7 @@ NSUserDefaults *baseInfo = nil;
             {
                 //进入阅读
                 NSLog(@"阅读离线数据数据");
-                //[self startApp];
+                [self startApp];
             }
             break;
         case ReachableViaWWAN: //use 3g network

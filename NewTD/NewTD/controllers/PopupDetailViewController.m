@@ -59,7 +59,7 @@ VideoViewController *videoViewController = nil;
   
 	// Do any additional setup after loading the view.
     [backBtn setBackgroundImage:[UIImage imageNamed:@"btnBackNormal"] forState:UIControlStateNormal];
-    [backBtn setBackgroundImage:[UIImage imageNamed:@"btnBackPressed"] forState:UIControlStateHighlighted];
+    [backBtn setBackgroundImage:[UIImage imageNamed:@"btnBackPressed"] forState:UIControlStateSelected];
     
     [backBtn addTarget:self action:@selector(BtnCloseClick) forControlEvents:UIControlEventTouchUpInside];
     backBtn.alpha = 1;

@@ -144,6 +144,10 @@
                                 <rect key="frame" x="0.0" y="80" width="1024" height="688"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </scrollView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="musicPlayer" translatesAutoresizingMaskIntoConstraints="NO" id="NPh-Jy-cU6">
+                                <rect key="frame" x="974" y="718" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -160,6 +164,7 @@
                         <outlet property="menuLandscapeLabel" destination="W8T-nK-Pil" id="oet-2E-oe2"/>
                         <outlet property="menuStoryBtn" destination="Yte-j9-WP8" id="fKF-DF-6TJ"/>
                         <outlet property="menuStoryLabel" destination="hqO-b3-t5E" id="UO5-Qd-paK"/>
+                        <outlet property="musicBtn" destination="NPh-Jy-cU6" id="kI9-RD-yEu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -168,6 +173,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="musicPlayer" width="50" height="50"/>
         <image name="navLogoActive" width="128" height="55"/>
         <image name="startImage" width="1024" height="768"/>
     </resources>

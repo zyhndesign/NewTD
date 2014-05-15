@@ -35,6 +35,9 @@ extern DBUtils *db;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    [communityTitleLabel setText:NSLocalizedString(@"communityTitle", nil)];
+    
     // Do any additional setup after loading the view.
     int countArticle = [db countByCategory:COMMUNITY_CATEGORY];
     countPage = (countArticle / COMMUNITY_INSIDE_NUM);

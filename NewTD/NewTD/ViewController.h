@@ -10,6 +10,7 @@
 
 @class SuperColumnViewController;
 @class FooterViewController;
+@class MusicViewController;
 
 @interface ViewController : UIViewController<UIScrollViewDelegate>
 {
@@ -26,13 +27,16 @@
     IBOutlet UIScrollView *mainScrollView;
     IBOutlet UIImageView *logoImageView;
     
-    SuperColumnViewController* homeViewController;
-    SuperColumnViewController* landscapeViewController;
-    SuperColumnViewController* humanityViewController;
-    SuperColumnViewController* storyViewController;
-    SuperColumnViewController* communityViewController;
-    FooterViewController* footerViewController;
+    IBOutlet UIImageView *musicBtn;
+    
+    SuperColumnViewController *homeViewController;
+    SuperColumnViewController *landscapeViewController;
+    SuperColumnViewController *humanityViewController;
+    SuperColumnViewController *storyViewController;
+    SuperColumnViewController *communityViewController;
+    FooterViewController *footerViewController;
 
+    MusicViewController *musicViewController;
     /**
      *  在ScrollView 中各个栏目Y坐标值
      */
@@ -51,6 +55,8 @@
 @property (strong, nonatomic) IBOutlet UILabel *menuHumanityLabel;
 @property (strong, nonatomic) IBOutlet UILabel *menuStoryLabel;
 @property (strong, nonatomic) IBOutlet UILabel *menuCommunityLabel;
+
+@property (strong, nonatomic) IBOutlet UIImageView *musicBtn;
 
 @property (strong, nonatomic) IBOutlet UIScrollView *mainScrollView;
 @property (strong, nonatomic) IBOutlet UIImageView *logoImageView;
@@ -97,4 +103,9 @@
  *  @param communityState   当前为社区栏目
  */
 - (void) setNavBtnSelectState:(BOOL)landBtnState Humanity:(BOOL)humanityBtnState Story:(BOOL)storyBtnState Community:(BOOL)communityState;
+
+/**
+ *  音乐播放按钮事件
+ */
+-(void) musicBtnClick;
 @end

@@ -56,10 +56,8 @@ PopupDetailViewController* detailViewController;
     thumbDownQueue = [NSOperationQueue new];
     [thumbDownQueue setMaxConcurrentOperationCount:1];
     
-    db = [[DBUtils alloc] init];
     NSMutableArray *muArray = [db queryHeadline];
-    
-    
+        
     NSOperation *downOperation = nil;
     
     if ([muArray count] >= 1)

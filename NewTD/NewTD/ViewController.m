@@ -15,6 +15,7 @@
 #import "controllers/StoryViewController.h"
 #import "controllers/FooterViewController.h"
 #import "controllers/CommunityViewController.h"
+#import "controllers/MusicViewController.h"
 
 @interface ViewController ()
 
@@ -26,6 +27,8 @@
 
 @synthesize menuCommunityLabel, menuHumanityLabel, menuLandscapeLabel, menuStoryLabel;
 @synthesize mainScrollView, logoImageView;
+
+@synthesize musicBtn;
 
 - (void)viewDidLoad
 {
@@ -98,7 +101,7 @@
     CGFloat contentSizeHeight = homeCGSize.height +  landscapeCGSize.height + humanityCGSize.height +  storyCGSize.height + communityCGSize.height + footerCGSize.height;
     
     mainScrollView.contentSize = CGSizeMake(screenBounds.size.width, contentSizeHeight);
-    mainScrollView.bounces = NO;
+    //mainScrollView.bounces = NO;
     mainScrollView.delegate = self;
 
     logoImageView.userInteractionEnabled = YES;
@@ -113,6 +116,14 @@
     [menuCommunityLabel setHidden:YES];
     [menuHumanityLabel setHidden:YES];
     [menuStoryLabel setHidden:YES];
+        
+    musicViewController = [[MusicViewController new] initWithNibName:@"MusicPlayerView" bundle:mainBundle];
+    [musicViewController.view setFrame:CGRectMake(1024, 718, musicViewController.view.frame.size.width, musicViewController.view.frame.size.height)];
+    [self.view addSubview:musicViewController.view];
+    
+    musicBtn.userInteractionEnabled = YES;
+    UITapGestureRecognizer *sigTab = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(musicBtnClick)];
+    [musicBtn addGestureRecognizer:sigTab];
     
 }
 
@@ -242,5 +253,32 @@
         [menuHumanityLabel setHidden:YES];
         [menuStoryLabel setHidden:YES];
     }
+}
+
+-(void) musicBtnClick
+{
+    [self.view bringSubviewToFront:musicBtn];
+    if(musicViewController != nil)
+    {
+        if (musicViewController.view.frame.origin.x == 0)
+        {
+            [UIView animateWithDuration:0.3
+                             animations:^(void){
+                                 [musicViewController.view setCenter:CGPointMake(1024 + 512, musicViewController.view.center.y)];
+                             }
+                             completion:^(BOOL finish){
+                             }];
+        }
+        else
+        {
+            [UIView animateWithDuration:0.3
+                             animations:^(void){
+                                 [musicViewController.view setCenter:CGPointMake( 512, musicViewController.view.center.y)];
+                             }
+                             completion:^(BOOL finish){
+                             }];
+        }
+    }
+   
 }
 @end

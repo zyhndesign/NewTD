@@ -36,9 +36,9 @@
                     <autoresizingMask key="autoresizingMask"/>
                 </imageView>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QMX-yk-tgt">
-                    <rect key="frame" x="391" y="749" width="242" height="21"/>
+                    <rect key="frame" x="391" y="747" width="242" height="26"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
