@@ -62,7 +62,7 @@ PopupDetailViewController* detailViewController;
     
     if ([muArray count] >= 1)
     {
-        NSMutableDictionary *muDict = [muArray objectAtIndex:1];
+        NSMutableDictionary *muDict = [muArray objectAtIndex:0];
         [firstArticleTitle setText:[muDict objectForKey:@"title"]];
         firstArticleTime.textAlignment = NSTextAlignmentCenter;
         [firstArticleTime setText:[TimeUtil convertTimeFormat:[muDict objectForKey:@"timestamp"]]];
