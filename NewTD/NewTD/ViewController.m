@@ -34,6 +34,9 @@
 {
     [super viewDidLoad];
 	
+    //set full screen
+    [[UIApplication sharedApplication] setStatusBarHidden:YES];
+    
     [[GAI sharedInstance].defaultTracker set:@"main view"
                                        value:@"ViewController Screen"];
     

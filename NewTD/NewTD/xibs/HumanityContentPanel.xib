@@ -14,7 +14,7 @@
                     <rect key="frame" x="77" y="15" width="210" height="440"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <subviews>
-                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="202" contentMode="center" fixedFrame="YES" image="default-200" translatesAutoresizingMaskIntoConstraints="NO" id="pRf-m5-hIz">
+                        <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="202" contentMode="center" fixedFrame="YES" image="default-200" translatesAutoresizingMaskIntoConstraints="NO" id="pRf-m5-hIz">
                             <rect key="frame" x="5" y="0.0" width="200" height="200"/>
                             <autoresizingMask key="autoresizingMask"/>
                         </imageView>
@@ -49,7 +49,7 @@
                     <rect key="frame" x="303" y="15" width="210" height="440"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <subviews>
-                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="207" contentMode="center" fixedFrame="YES" image="default-200" translatesAutoresizingMaskIntoConstraints="NO" id="g0y-3o-HUH">
+                        <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="207" contentMode="center" fixedFrame="YES" image="default-200" translatesAutoresizingMaskIntoConstraints="NO" id="g0y-3o-HUH">
                             <rect key="frame" x="5" y="240" width="200" height="200"/>
                             <autoresizingMask key="autoresizingMask"/>
                         </imageView>
@@ -84,7 +84,7 @@
                     <rect key="frame" x="531" y="15" width="210" height="440"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <subviews>
-                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="212" contentMode="center" fixedFrame="YES" image="default-200" translatesAutoresizingMaskIntoConstraints="NO" id="3Ck-GY-CDk">
+                        <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="212" contentMode="center" fixedFrame="YES" image="default-200" translatesAutoresizingMaskIntoConstraints="NO" id="3Ck-GY-CDk">
                             <rect key="frame" x="5" y="0.0" width="200" height="200"/>
                             <autoresizingMask key="autoresizingMask"/>
                         </imageView>
@@ -119,7 +119,7 @@
                     <rect key="frame" x="756" y="15" width="210" height="440"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <subviews>
-                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="217" contentMode="center" fixedFrame="YES" image="default-200" translatesAutoresizingMaskIntoConstraints="NO" id="Eom-bf-Cwy">
+                        <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="217" contentMode="center" fixedFrame="YES" image="default-200" translatesAutoresizingMaskIntoConstraints="NO" id="Eom-bf-Cwy">
                             <rect key="frame" x="5" y="240" width="200" height="200"/>
                             <autoresizingMask key="autoresizingMask"/>
                         </imageView>

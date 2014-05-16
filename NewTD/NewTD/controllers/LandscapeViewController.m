@@ -110,6 +110,7 @@ extern DBUtils *db;
             }
             
             [firstLabelTitle setText:[muDict objectForKey:@"title"]];
+            firstLabelTitle.backgroundColor = [UIColor clearColor];
             
             firstImg.accessibilityLabel = [muDict objectForKey:@"serverID"];
             firstImg.userInteractionEnabled = YES;
@@ -143,6 +144,7 @@ extern DBUtils *db;
             }
             
             [secondLabelTitle setText:[muDict objectForKey:@"title"]];
+            secondLabelTitle.backgroundColor = [UIColor clearColor];
             
             secondImg.accessibilityLabel = [muDict objectForKey:@"serverID"];
             secondImg.userInteractionEnabled = YES;
@@ -175,6 +177,7 @@ extern DBUtils *db;
             }
             
             [thirdLabelTitle setText:[muDict objectForKey:@"title"]];
+            thirdLabelTitle.backgroundColor = [UIColor clearColor];
             
             thirdImg.accessibilityLabel = [muDict objectForKey:@"serverID"];
             thirdImg.userInteractionEnabled = YES;
@@ -208,6 +211,7 @@ extern DBUtils *db;
             
             
             [fourLabelTitle setText:[muDict objectForKey:@"title"]];
+            fourLabelTitle.backgroundColor = [UIColor clearColor];
             
             fourImg.accessibilityLabel = [muDict objectForKey:@"serverID"];
             fourImg.userInteractionEnabled = YES;
@@ -241,6 +245,7 @@ extern DBUtils *db;
             }
             
             [fiveLabelTitle setText:[muDict objectForKey:@"title"]];
+            fiveLabelTitle.backgroundColor = [UIColor clearColor];
             
             fiveImg.accessibilityLabel = [muDict objectForKey:@"serverID"];
             fiveImg.userInteractionEnabled = YES;
@@ -273,6 +278,7 @@ extern DBUtils *db;
             }
             
             [sixLabelTitle setText:[muDict objectForKey:@"title"]];
+            sixLabelTitle.backgroundColor = [UIColor clearColor];
             
             sixImg.accessibilityLabel = [muDict objectForKey:@"serverID"];
             sixImg.userInteractionEnabled = YES;

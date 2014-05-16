@@ -19,9 +19,12 @@
                     <rect key="frame" x="56" y="20" width="200" height="394"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
-                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="402" contentMode="center" fixedFrame="YES" image="default-200" translatesAutoresizingMaskIntoConstraints="NO" id="Pvo-uT-jc8">
+                        <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="402" contentMode="center" fixedFrame="YES" image="default-200" translatesAutoresizingMaskIntoConstraints="NO" id="Pvo-uT-jc8">
                             <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
                             <autoresizingMask key="autoresizingMask"/>
+                            <accessibility key="accessibilityConfiguration">
+                                <accessibilityTraits key="traits" none="YES" image="YES" notEnabled="YES"/>
+                            </accessibility>
                         </imageView>
                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="403" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PHe-dP-vya">
                             <rect key="frame" x="0.0" y="208" width="200" height="26"/>
@@ -54,9 +57,12 @@
                     <rect key="frame" x="292" y="20" width="200" height="394"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
-                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="407" contentMode="center" fixedFrame="YES" image="default-200" translatesAutoresizingMaskIntoConstraints="NO" id="yeZ-My-veU">
+                        <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="407" contentMode="center" fixedFrame="YES" image="default-200" translatesAutoresizingMaskIntoConstraints="NO" id="yeZ-My-veU">
                             <rect key="frame" x="0.0" y="194" width="200" height="200"/>
                             <autoresizingMask key="autoresizingMask"/>
+                            <accessibility key="accessibilityConfiguration">
+                                <accessibilityTraits key="traits" none="YES" image="YES" notEnabled="YES"/>
+                            </accessibility>
                         </imageView>
                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="408" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1RL-G0-xwk">
                             <rect key="frame" x="0.0" y="1" width="200" height="26"/>
@@ -89,9 +95,12 @@
                     <rect key="frame" x="524" y="20" width="200" height="394"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
-                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="412" contentMode="center" fixedFrame="YES" image="default-200" translatesAutoresizingMaskIntoConstraints="NO" id="CYb-bd-XWc">
+                        <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="412" contentMode="center" fixedFrame="YES" image="default-200" translatesAutoresizingMaskIntoConstraints="NO" id="CYb-bd-XWc">
                             <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
                             <autoresizingMask key="autoresizingMask"/>
+                            <accessibility key="accessibilityConfiguration">
+                                <accessibilityTraits key="traits" none="YES" image="YES" notEnabled="YES"/>
+                            </accessibility>
                         </imageView>
                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="413" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zIm-qv-TWf">
                             <rect key="frame" x="0.0" y="208" width="200" height="21"/>
@@ -124,7 +133,7 @@
                     <rect key="frame" x="754" y="20" width="200" height="394"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
-                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="417" contentMode="center" fixedFrame="YES" image="default-200" translatesAutoresizingMaskIntoConstraints="NO" id="HuF-Kb-ezn">
+                        <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="417" contentMode="center" fixedFrame="YES" image="default-200" translatesAutoresizingMaskIntoConstraints="NO" id="HuF-Kb-ezn">
                             <rect key="frame" x="0.0" y="194" width="200" height="200"/>
                             <autoresizingMask key="autoresizingMask"/>
                         </imageView>

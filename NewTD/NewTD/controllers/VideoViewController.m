@@ -9,6 +9,7 @@
 #import "VideoViewController.h"
 #import <MediaPlayer/MPMoviePlayerController.h>
 #import "PopupDetailViewController.h"
+#import <AVFoundation/AVAudioSession.h>
 
 @interface VideoViewController ()
 
@@ -60,6 +61,8 @@
                                              selector:@selector(myMovieFinishedCallback:)
                                                  name:MPMoviePlayerPlaybackDidFinishNotification
                                                object:player];
+    
+    [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback error:nil];
 }
 
 -(void)myMovieFinishedCallback:(NSNotification*)notify

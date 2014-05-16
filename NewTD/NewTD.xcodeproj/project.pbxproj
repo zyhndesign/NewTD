@@ -94,6 +94,7 @@
 		D5E3C9F71920BAEE00BB5F7E /* DownloadTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D5E3C9F61920BAEE00BB5F7E /* DownloadTableViewCell.m */; };
 		D5E3C9FD1920BE4C00BB5F7E /* UIImageView+RotationAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = D5E3C9FC1920BE4C00BB5F7E /* UIImageView+RotationAnimation.m */; };
 		D5E3CA021920C18400BB5F7E /* SplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5E3CA011920C18400BB5F7E /* SplashViewController.m */; };
+		D5E802DD19259BEE00D3056A /* hasvideo.png in Resources */ = {isa = PBXBuildFile; fileRef = D5E802DC19259BEE00D3056A /* hasvideo.png */; };
 		D5E9B50C1922FD4D00DF254B /* UILabel+VerticalAlign.m in Sources */ = {isa = PBXBuildFile; fileRef = D5E9B50B1922FD4D00DF254B /* UILabel+VerticalAlign.m */; };
 		D5E9B5121923283200DF254B /* VideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5E9B5111923283200DF254B /* VideoViewController.m */; };
 		D5E9B5141923286000DF254B /* VideoPlay.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5E9B5131923286000DF254B /* VideoPlay.xib */; };
@@ -266,6 +267,7 @@
 		D5E3C9FC1920BE4C00BB5F7E /* UIImageView+RotationAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+RotationAnimation.m"; sourceTree = "<group>"; };
 		D5E3CA001920C18400BB5F7E /* SplashViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplashViewController.h; sourceTree = "<group>"; };
 		D5E3CA011920C18400BB5F7E /* SplashViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplashViewController.m; sourceTree = "<group>"; };
+		D5E802DC19259BEE00D3056A /* hasvideo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hasvideo.png; sourceTree = "<group>"; };
 		D5E9B50A1922FD4D00DF254B /* UILabel+VerticalAlign.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+VerticalAlign.h"; sourceTree = "<group>"; };
 		D5E9B50B1922FD4D00DF254B /* UILabel+VerticalAlign.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+VerticalAlign.m"; sourceTree = "<group>"; };
 		D5E9B5101923283200DF254B /* VideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoViewController.h; sourceTree = "<group>"; };
@@ -415,6 +417,7 @@
 		D58DA473191B60A000D900DE /* images */ = {
 			isa = PBXGroup;
 			children = (
+				D5E802DC19259BEE00D3056A /* hasvideo.png */,
 				D58DA50B191B700C00D900DE /* music_entrance.gif */,
 				D58DA50C191B700C00D900DE /* video.png */,
 				D58DA505191B6FC500D900DE /* projectbg_bg_01.png */,
@@ -770,6 +773,7 @@
 				D5E9B5141923286000DF254B /* VideoPlay.xib in Resources */,
 				D5E9B52319233E5200DF254B /* 404-1.png in Resources */,
 				D5E9B51E19233E0200DF254B /* 404.css in Resources */,
+				D5E802DD19259BEE00D3056A /* hasvideo.png in Resources */,
 				D5E3C9B319209BAE00BB5F7E /* StoryContentPanel.xib in Resources */,
 				D58DA456191B5F3000D900DE /* Images.xcassets in Resources */,
 				D5E9B532192354A700DF254B /* download_zh.plist in Resources */,
