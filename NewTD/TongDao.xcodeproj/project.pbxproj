@@ -26,7 +26,7 @@
 		D58DA45E191B5F3000D900DE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D58DA43D191B5F3000D900DE /* Foundation.framework */; };
 		D58DA45F191B5F3000D900DE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D58DA441191B5F3000D900DE /* UIKit.framework */; };
 		D58DA467191B5F3000D900DE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D58DA465191B5F3000D900DE /* InfoPlist.strings */; };
-		D58DA469191B5F3000D900DE /* NewTDTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D58DA468191B5F3000D900DE /* NewTDTests.m */; };
+		D58DA469191B5F3000D900DE /* TongDaoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D58DA468191B5F3000D900DE /* TongDaoTests.m */; };
 		D58DA4D7191B60A000D900DE /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = D58DA48C191B60A000D900DE /* FMDatabase.m */; };
 		D58DA4D8191B60A000D900DE /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = D58DA48E191B60A000D900DE /* FMDatabaseAdditions.m */; };
 		D58DA4D9191B60A000D900DE /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = D58DA490191B60A000D900DE /* FMDatabasePool.m */; };
@@ -151,7 +151,7 @@
 		D58DA45C191B5F3000D900DE /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		D58DA464191B5F3000D900DE /* TongDaoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TongDaoTests-Info.plist"; sourceTree = "<group>"; };
 		D58DA466191B5F3000D900DE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		D58DA468191B5F3000D900DE /* NewTDTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewTDTests.m; sourceTree = "<group>"; };
+		D58DA468191B5F3000D900DE /* TongDaoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TongDaoTests.m; sourceTree = "<group>"; };
 		D58DA48A191B60A000D900DE /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
 		D58DA48B191B60A000D900DE /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
 		D58DA48C191B60A000D900DE /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
@@ -325,8 +325,8 @@
 		D58DA431191B5F3000D900DE = {
 			isa = PBXGroup;
 			children = (
-				D58DA443191B5F3000D900DE /* NewTD */,
-				D58DA462191B5F3000D900DE /* NewTDTests */,
+				D58DA443191B5F3000D900DE /* TongDao */,
+				D58DA462191B5F3000D900DE /* TongDaoTests */,
 				D58DA43C191B5F3000D900DE /* Frameworks */,
 				D58DA43B191B5F3000D900DE /* Products */,
 			);
@@ -360,7 +360,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		D58DA443191B5F3000D900DE /* NewTD */ = {
+		D58DA443191B5F3000D900DE /* TongDao */ = {
 			isa = PBXGroup;
 			children = (
 				D5E9B51919233E0200DF254B /* files */,
@@ -380,7 +380,7 @@
 				D58DA455191B5F3000D900DE /* Images.xcassets */,
 				D58DA444191B5F3000D900DE /* Supporting Files */,
 			);
-			path = NewTD;
+			path = TongDao;
 			sourceTree = "<group>";
 		};
 		D58DA444191B5F3000D900DE /* Supporting Files */ = {
@@ -396,13 +396,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		D58DA462191B5F3000D900DE /* NewTDTests */ = {
+		D58DA462191B5F3000D900DE /* TongDaoTests */ = {
 			isa = PBXGroup;
 			children = (
-				D58DA468191B5F3000D900DE /* NewTDTests.m */,
+				D58DA468191B5F3000D900DE /* TongDaoTests.m */,
 				D58DA463191B5F3000D900DE /* Supporting Files */,
 			);
-			path = NewTDTests;
+			path = TongDaoTests;
 			sourceTree = "<group>";
 		};
 		D58DA463191B5F3000D900DE /* Supporting Files */ = {
@@ -867,7 +867,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D58DA469191B5F3000D900DE /* NewTDTests.m in Sources */,
+				D58DA469191B5F3000D900DE /* TongDaoTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1000,16 +1000,18 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Zhongyi (Hunan) Industrial Design Co., Ltd. (FNB4FR5EG6)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Zhongyi (Hunan) Industrial Design Co., Ltd. (FNB4FR5EG6)";
+				COMPRESS_PNG_FILES = YES;
 				FRAMEWORK_SEARCH_PATHS = /usr/lib/libxml2.dylib;
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "NewTD/TongDao-Prefix.pch";
+				GCC_PREFIX_HEADER = "TongDao/TongDao-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(SDKROOT)/usr/include/libxml2",
 				);
-				INFOPLIST_FILE = "NewTD/TongDao-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				INFOPLIST_FILE = "TongDao/TongDao-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Volumes/MAC_DATA/第三方组件/GoogleAnalyticsServicesiOS_3.06",
@@ -1029,16 +1031,18 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Zhongyi (Hunan) Industrial Design Co., Ltd. (FNB4FR5EG6)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Zhongyi (Hunan) Industrial Design Co., Ltd. (FNB4FR5EG6)";
+				COMPRESS_PNG_FILES = YES;
 				FRAMEWORK_SEARCH_PATHS = /usr/lib/libxml2.dylib;
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "NewTD/TongDao-Prefix.pch";
+				GCC_PREFIX_HEADER = "TongDao/TongDao-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(SDKROOT)/usr/include/libxml2",
 				);
-				INFOPLIST_FILE = "NewTD/TongDao-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				INFOPLIST_FILE = "TongDao/TongDao-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Volumes/MAC_DATA/第三方组件/GoogleAnalyticsServicesiOS_3.06",
@@ -1061,7 +1065,7 @@
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "NewTD/NewTD-Prefix.pch";
+				GCC_PREFIX_HEADER = "TongDao/TongDao-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -1083,7 +1087,7 @@
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "NewTD/NewTD-Prefix.pch";
+				GCC_PREFIX_HEADER = "TongDao/TongDao-Prefix.pch";
 				INFOPLIST_FILE = "NewTDTests/TongDaoTests-Info.plist";
 				PRODUCT_NAME = TongDaoTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";

@@ -8,11 +8,11 @@
 
 #import <XCTest/XCTest.h>
 
-@interface NewTDTests : XCTestCase
+@interface TongDaoTests : XCTestCase
 
 @end
 
-@implementation NewTDTests
+@implementation TongDaoTests
 
 - (void)setUp
 {

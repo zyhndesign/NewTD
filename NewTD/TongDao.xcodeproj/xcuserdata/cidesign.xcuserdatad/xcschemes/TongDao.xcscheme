@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D58DA439191B5F3000D900DE"
-               BuildableName = "NewTD.app"
+               BuildableName = "TongDao.app"
                BlueprintName = "TongDao"
                ReferencedContainer = "container:TongDao.xcodeproj">
             </BuildableReference>
@@ -33,7 +33,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D58DA45A191B5F3000D900DE"
-               BuildableName = "NewTDTests.xctest"
+               BuildableName = "TongDaoTests.xctest"
                BlueprintName = "TongDaoTests"
                ReferencedContainer = "container:TongDao.xcodeproj">
             </BuildableReference>
@@ -43,7 +43,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D58DA439191B5F3000D900DE"
-            BuildableName = "NewTD.app"
+            BuildableName = "TongDao.app"
             BlueprintName = "TongDao"
             ReferencedContainer = "container:TongDao.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D58DA439191B5F3000D900DE"
-            BuildableName = "NewTD.app"
+            BuildableName = "TongDao.app"
             BlueprintName = "TongDao"
             ReferencedContainer = "container:TongDao.xcodeproj">
          </BuildableReference>
@@ -80,7 +80,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D58DA439191B5F3000D900DE"
-            BuildableName = "NewTD.app"
+            BuildableName = "TongDao.app"
             BlueprintName = "TongDao"
             ReferencedContainer = "container:TongDao.xcodeproj">
          </BuildableReference>
