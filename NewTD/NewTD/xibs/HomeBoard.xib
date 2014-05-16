@@ -159,7 +159,7 @@
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="waterGraphics" translatesAutoresizingMaskIntoConstraints="NO" id="ZbM-xr-1tr">
+                <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" fixedFrame="YES" image="waterGraphics" translatesAutoresizingMaskIntoConstraints="NO" id="ZbM-xr-1tr">
                     <rect key="frame" x="288" y="130" width="437" height="138"/>
                     <autoresizingMask key="autoresizingMask"/>
                 </imageView>

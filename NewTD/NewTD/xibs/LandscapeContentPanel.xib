@@ -14,7 +14,7 @@
                     <rect key="frame" x="148" y="7" width="238" height="238"/>
                     <autoresizingMask key="autoresizingMask"/>
                 </imageView>
-                <view alpha="0.49999999999999961" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RlN-5T-9qL">
+                <view alpha="0.49999999999999961" tag="130" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RlN-5T-9qL">
                     <rect key="frame" x="148" y="215" width="238" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -30,7 +30,7 @@
                     <rect key="frame" x="407" y="7" width="238" height="238"/>
                     <autoresizingMask key="autoresizingMask"/>
                 </imageView>
-                <view alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jo4-vj-Uem">
+                <view alpha="0.5" tag="131" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jo4-vj-Uem">
                     <rect key="frame" x="407" y="215" width="238" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -46,7 +46,7 @@
                     <rect key="frame" x="653" y="7" width="238" height="238"/>
                     <autoresizingMask key="autoresizingMask"/>
                 </imageView>
-                <view alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U4k-YK-GZd">
+                <view alpha="0.5" tag="132" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U4k-YK-GZd">
                     <rect key="frame" x="653" y="215" width="238" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -62,7 +62,7 @@
                     <rect key="frame" x="148" y="248" width="238" height="238"/>
                     <autoresizingMask key="autoresizingMask"/>
                 </imageView>
-                <view alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yrI-u3-xup">
+                <view alpha="0.5" tag="133" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yrI-u3-xup">
                     <rect key="frame" x="148" y="457" width="238" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -78,7 +78,7 @@
                     <rect key="frame" x="407" y="248" width="238" height="238"/>
                     <autoresizingMask key="autoresizingMask"/>
                 </imageView>
-                <view alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fm5-ak-TKp">
+                <view alpha="0.5" tag="134" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fm5-ak-TKp">
                     <rect key="frame" x="407" y="457" width="238" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -94,7 +94,7 @@
                     <rect key="frame" x="653" y="248" width="238" height="238"/>
                     <autoresizingMask key="autoresizingMask"/>
                 </imageView>
-                <view alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d5T-Qr-pej">
+                <view alpha="0.5" tag="135" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d5T-Qr-pej">
                     <rect key="frame" x="653" y="457" width="238" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>

@@ -137,6 +137,7 @@ extern DBUtils *db;
         
         UIImageView *secondImg = (UIImageView*)[subview viewWithTag:306];
         UILabel* secondLabelTitle = (UILabel*)[subview viewWithTag:307];
+        UIView *secondView = (UIView *)[subview viewWithTag:322];
         
         if (muArray.count >= 2 && [muArray objectAtIndex:1])
         {
@@ -166,10 +167,12 @@ extern DBUtils *db;
         {
             secondImg.hidden = YES;
             secondLabelTitle.hidden = YES;
+            secondView.hidden = YES;
         }
         
         UIImageView *thirdImg = (UIImageView*)[subview viewWithTag:312];
         UILabel* thirdLabelTitle = (UILabel*)[subview viewWithTag:313];
+        UIView *thirdView = (UIView *)[subview viewWithTag:324];
         
         if (muArray.count >= 3 && [muArray objectAtIndex:2])
         {
@@ -199,10 +202,12 @@ extern DBUtils *db;
         {
             thirdImg.hidden = YES;
             thirdLabelTitle.hidden = YES;
+            thirdView.hidden = YES;
         }
         
         UIImageView *fourImg = (UIImageView*)[subview viewWithTag:309];
         UILabel* fourLabelTitle = (UILabel*)[subview viewWithTag:310];
+        UIView *fourView = (UIView *)[subview viewWithTag:323];
         
         if (muArray.count >= 4 && [muArray objectAtIndex:3])
         {
@@ -233,10 +238,12 @@ extern DBUtils *db;
         {
             fourImg.hidden = YES;
             fourLabelTitle.hidden = YES;
+            fourView.hidden = YES;
         }
         
         UIImageView *fiveImg = (UIImageView*)[subview viewWithTag:315];
         UILabel* fiveLabelTitle = (UILabel*)[subview viewWithTag:316];
+        UIView *fiveView = (UIView *)[subview viewWithTag:325];
         
         if (muArray.count >= 5 && [muArray objectAtIndex:4])
         {
@@ -266,6 +273,7 @@ extern DBUtils *db;
         {
             fiveImg.hidden = YES;
             fiveLabelTitle.hidden = YES;
+            fiveView.hidden = YES;
         }
         
         [columnScrollView addSubview:subview];

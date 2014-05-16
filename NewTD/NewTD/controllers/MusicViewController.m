@@ -15,6 +15,7 @@
 #import "../libs/AFNetworking/AFHTTPRequestOperation.h"
 #import "../libs/AFNetworking/AFJSONRequestOperation.h"
 #import <AVFoundation/AVAudioPlayer.h>
+#import <AVFoundation/AVAudioSession.h>
 #import "../libs/AudioStream/AudioStreamer.h"
 #import "../libs/Reachability/Reachability.h"
 #import "../libs/JSONKit/JSONKit.h"
@@ -62,6 +63,13 @@ extern DBUtils *db;
     
     musicArray = [NSMutableArray new];
     [self loadMusicPlayMusic];
+    
+    [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback error:nil];
+    
+    //注册音乐监听广播，用于视频播放时，暂时停止音乐播放
+    NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
+    [center addObserver:self selector:@selector(pauseMusic) name:@"PAUSE_MUSIC_PAUSE" object:nil];
+    [center addObserver:self selector:@selector(playingMusic) name:@"PAUSE_MUSIC_PLAYING" object:nil];
 }
 
 - (void)didReceiveMemoryWarning
