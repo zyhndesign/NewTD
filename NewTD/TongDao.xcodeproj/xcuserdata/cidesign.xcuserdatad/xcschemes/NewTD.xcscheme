@@ -16,8 +16,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D58DA439191B5F3000D900DE"
                BuildableName = "NewTD.app"
-               BlueprintName = "NewTD"
-               ReferencedContainer = "container:NewTD.xcodeproj">
+               BlueprintName = "TongDao"
+               ReferencedContainer = "container:TongDao.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -34,8 +34,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D58DA45A191B5F3000D900DE"
                BuildableName = "NewTDTests.xctest"
-               BlueprintName = "NewTDTests"
-               ReferencedContainer = "container:NewTD.xcodeproj">
+               BlueprintName = "TongDaoTests"
+               ReferencedContainer = "container:TongDao.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -44,8 +44,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D58DA439191B5F3000D900DE"
             BuildableName = "NewTD.app"
-            BlueprintName = "NewTD"
-            ReferencedContainer = "container:NewTD.xcodeproj">
+            BlueprintName = "TongDao"
+            ReferencedContainer = "container:TongDao.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -63,8 +63,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D58DA439191B5F3000D900DE"
             BuildableName = "NewTD.app"
-            BlueprintName = "NewTD"
-            ReferencedContainer = "container:NewTD.xcodeproj">
+            BlueprintName = "TongDao"
+            ReferencedContainer = "container:TongDao.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -81,8 +81,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D58DA439191B5F3000D900DE"
             BuildableName = "NewTD.app"
-            BlueprintName = "NewTD"
-            ReferencedContainer = "container:NewTD.xcodeproj">
+            BlueprintName = "TongDao"
+            ReferencedContainer = "container:TongDao.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

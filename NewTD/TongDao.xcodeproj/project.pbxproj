@@ -134,22 +134,22 @@
 		D52206551921B6C800CBB9F4 /* CommunityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommunityViewController.m; sourceTree = "<group>"; };
 		D52206571921BBAC00CBB9F4 /* FooterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FooterViewController.h; sourceTree = "<group>"; };
 		D52206581921BBAC00CBB9F4 /* FooterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FooterViewController.m; sourceTree = "<group>"; };
-		D58DA43A191B5F3000D900DE /* NewTD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewTD.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D58DA43A191B5F3000D900DE /* TongDao.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TongDao.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D58DA43D191B5F3000D900DE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D58DA43F191B5F3000D900DE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		D58DA441191B5F3000D900DE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		D58DA445191B5F3000D900DE /* NewTD-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NewTD-Info.plist"; sourceTree = "<group>"; };
+		D58DA445191B5F3000D900DE /* TongDao-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TongDao-Info.plist"; sourceTree = "<group>"; };
 		D58DA449191B5F3000D900DE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		D58DA44B191B5F3000D900DE /* NewTD-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NewTD-Prefix.pch"; sourceTree = "<group>"; };
+		D58DA44B191B5F3000D900DE /* TongDao-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TongDao-Prefix.pch"; sourceTree = "<group>"; };
 		D58DA44C191B5F3000D900DE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D58DA44D191B5F3000D900DE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		D58DA450191B5F3000D900DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D58DA452191B5F3000D900DE /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		D58DA453191B5F3000D900DE /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		D58DA455191B5F3000D900DE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		D58DA45B191B5F3000D900DE /* NewTDTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NewTDTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D58DA45B191B5F3000D900DE /* TongDaoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TongDaoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D58DA45C191B5F3000D900DE /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		D58DA464191B5F3000D900DE /* NewTDTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NewTDTests-Info.plist"; sourceTree = "<group>"; };
+		D58DA464191B5F3000D900DE /* TongDaoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TongDaoTests-Info.plist"; sourceTree = "<group>"; };
 		D58DA466191B5F3000D900DE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D58DA468191B5F3000D900DE /* NewTDTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewTDTests.m; sourceTree = "<group>"; };
 		D58DA48A191B60A000D900DE /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
@@ -335,8 +335,8 @@
 		D58DA43B191B5F3000D900DE /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D58DA43A191B5F3000D900DE /* NewTD.app */,
-				D58DA45B191B5F3000D900DE /* NewTDTests.xctest */,
+				D58DA43A191B5F3000D900DE /* TongDao.app */,
+				D58DA45B191B5F3000D900DE /* TongDaoTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -387,10 +387,10 @@
 			isa = PBXGroup;
 			children = (
 				D5E9B531192354A700DF254B /* download_zh.plist */,
-				D58DA445191B5F3000D900DE /* NewTD-Info.plist */,
+				D58DA445191B5F3000D900DE /* TongDao-Info.plist */,
 				D58DA446191B5F3000D900DE /* InfoPlist.strings */,
 				D58DA449191B5F3000D900DE /* main.m */,
-				D58DA44B191B5F3000D900DE /* NewTD-Prefix.pch */,
+				D58DA44B191B5F3000D900DE /* TongDao-Prefix.pch */,
 				D5E3C99219205A7D00BB5F7E /* Localizable.strings */,
 			);
 			name = "Supporting Files";
@@ -408,7 +408,7 @@
 		D58DA463191B5F3000D900DE /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				D58DA464191B5F3000D900DE /* NewTDTests-Info.plist */,
+				D58DA464191B5F3000D900DE /* TongDaoTests-Info.plist */,
 				D58DA465191B5F3000D900DE /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
@@ -678,9 +678,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D58DA439191B5F3000D900DE /* NewTD */ = {
+		D58DA439191B5F3000D900DE /* TongDao */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D58DA46C191B5F3000D900DE /* Build configuration list for PBXNativeTarget "NewTD" */;
+			buildConfigurationList = D58DA46C191B5F3000D900DE /* Build configuration list for PBXNativeTarget "TongDao" */;
 			buildPhases = (
 				D58DA436191B5F3000D900DE /* Sources */,
 				D58DA437191B5F3000D900DE /* Frameworks */,
@@ -690,14 +690,14 @@
 			);
 			dependencies = (
 			);
-			name = NewTD;
+			name = TongDao;
 			productName = NewTD;
-			productReference = D58DA43A191B5F3000D900DE /* NewTD.app */;
+			productReference = D58DA43A191B5F3000D900DE /* TongDao.app */;
 			productType = "com.apple.product-type.application";
 		};
-		D58DA45A191B5F3000D900DE /* NewTDTests */ = {
+		D58DA45A191B5F3000D900DE /* TongDaoTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D58DA46F191B5F3000D900DE /* Build configuration list for PBXNativeTarget "NewTDTests" */;
+			buildConfigurationList = D58DA46F191B5F3000D900DE /* Build configuration list for PBXNativeTarget "TongDaoTests" */;
 			buildPhases = (
 				D58DA457191B5F3000D900DE /* Sources */,
 				D58DA458191B5F3000D900DE /* Frameworks */,
@@ -708,9 +708,9 @@
 			dependencies = (
 				D58DA461191B5F3000D900DE /* PBXTargetDependency */,
 			);
-			name = NewTDTests;
+			name = TongDaoTests;
 			productName = NewTDTests;
-			productReference = D58DA45B191B5F3000D900DE /* NewTDTests.xctest */;
+			productReference = D58DA45B191B5F3000D900DE /* TongDaoTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -722,12 +722,15 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "中意工业设计（湖南）有限责任公司";
 				TargetAttributes = {
+					D58DA439191B5F3000D900DE = {
+						DevelopmentTeam = FNB4FR5EG6;
+					};
 					D58DA45A191B5F3000D900DE = {
 						TestTargetID = D58DA439191B5F3000D900DE;
 					};
 				};
 			};
-			buildConfigurationList = D58DA435191B5F3000D900DE /* Build configuration list for PBXProject "NewTD" */;
+			buildConfigurationList = D58DA435191B5F3000D900DE /* Build configuration list for PBXProject "TongDao" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -741,8 +744,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D58DA439191B5F3000D900DE /* NewTD */,
-				D58DA45A191B5F3000D900DE /* NewTDTests */,
+				D58DA439191B5F3000D900DE /* TongDao */,
+				D58DA45A191B5F3000D900DE /* TongDaoTests */,
 			);
 		};
 /* End PBXProject section */
@@ -873,7 +876,7 @@
 /* Begin PBXTargetDependency section */
 		D58DA461191B5F3000D900DE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = D58DA439191B5F3000D900DE /* NewTD */;
+			target = D58DA439191B5F3000D900DE /* TongDao */;
 			targetProxy = D58DA460191B5F3000D900DE /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -996,15 +999,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Zhongyi (Hunan) Industrial Design Co., Ltd. (FNB4FR5EG6)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Zhongyi (Hunan) Industrial Design Co., Ltd. (FNB4FR5EG6)";
 				FRAMEWORK_SEARCH_PATHS = /usr/lib/libxml2.dylib;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "NewTD/NewTD-Prefix.pch";
+				GCC_PREFIX_HEADER = "NewTD/TongDao-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(SDKROOT)/usr/include/libxml2",
 				);
-				INFOPLIST_FILE = "NewTD/NewTD-Info.plist";
+				INFOPLIST_FILE = "NewTD/TongDao-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1012,7 +1016,7 @@
 					"$(SDKROOT)/usr/include/libxml2",
 				);
 				OTHER_LDFLAGS = "-lxml2";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = TongDao;
 				PROVISIONING_PROFILE = "06B34DFE-706D-4831-87D1-F3667CFCC2D3";
 				WRAPPER_EXTENSION = app;
 			};
@@ -1024,15 +1028,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Zhongyi (Hunan) Industrial Design Co., Ltd. (FNB4FR5EG6)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Zhongyi (Hunan) Industrial Design Co., Ltd. (FNB4FR5EG6)";
 				FRAMEWORK_SEARCH_PATHS = /usr/lib/libxml2.dylib;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "NewTD/NewTD-Prefix.pch";
+				GCC_PREFIX_HEADER = "NewTD/TongDao-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(SDKROOT)/usr/include/libxml2",
 				);
-				INFOPLIST_FILE = "NewTD/NewTD-Info.plist";
+				INFOPLIST_FILE = "NewTD/TongDao-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1040,7 +1045,7 @@
 					"$(SDKROOT)/usr/include/libxml2",
 				);
 				OTHER_LDFLAGS = "-lxml2";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = TongDao;
 				PROVISIONING_PROFILE = "06B34DFE-706D-4831-87D1-F3667CFCC2D3";
 				WRAPPER_EXTENSION = app;
 			};
@@ -1061,8 +1066,8 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "NewTDTests/NewTDTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "NewTDTests/TongDaoTests-Info.plist";
+				PRODUCT_NAME = TongDaoTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -1079,8 +1084,8 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NewTD/NewTD-Prefix.pch";
-				INFOPLIST_FILE = "NewTDTests/NewTDTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "NewTDTests/TongDaoTests-Info.plist";
+				PRODUCT_NAME = TongDaoTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -1089,7 +1094,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D58DA435191B5F3000D900DE /* Build configuration list for PBXProject "NewTD" */ = {
+		D58DA435191B5F3000D900DE /* Build configuration list for PBXProject "TongDao" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D58DA46A191B5F3000D900DE /* Debug */,
@@ -1098,7 +1103,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D58DA46C191B5F3000D900DE /* Build configuration list for PBXNativeTarget "NewTD" */ = {
+		D58DA46C191B5F3000D900DE /* Build configuration list for PBXNativeTarget "TongDao" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D58DA46D191B5F3000D900DE /* Debug */,
@@ -1107,7 +1112,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D58DA46F191B5F3000D900DE /* Build configuration list for PBXNativeTarget "NewTDTests" */ = {
+		D58DA46F191B5F3000D900DE /* Build configuration list for PBXNativeTarget "TongDaoTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D58DA470191B5F3000D900DE /* Debug */,
