@@ -12,6 +12,7 @@
 #import "../libs/MJPopup/UIViewController+MJPopupViewController.h"
 #import "PopupDetailViewController.h"
 #import "VarUtils.h"
+#import "../libs/AFNetworking/UIImageView+AFNetworking.h"
 
 @interface SuperColumnViewController ()
 
@@ -84,7 +85,6 @@ extern PopupDetailViewController* detailViewController;
         }
         
         NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:[suffixString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]]];
-        
         
         AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
         operation.outputStream = [NSOutputStream outputStreamToFileAtPath:path append:NO];
