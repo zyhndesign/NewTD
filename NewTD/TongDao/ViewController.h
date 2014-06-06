@@ -11,6 +11,7 @@
 @class SuperColumnViewController;
 @class FooterViewController;
 @class MusicViewController;
+@class MapViewController;
 
 @interface ViewController : UIViewController<UIScrollViewDelegate>
 {
@@ -28,6 +29,7 @@
     IBOutlet UIImageView *logoImageView;
     
     IBOutlet UIImageView *musicBtn;
+    IBOutlet UIImageView *mapBtn;
     
     SuperColumnViewController *homeViewController;
     SuperColumnViewController *landscapeViewController;
@@ -37,6 +39,7 @@
     FooterViewController *footerViewController;
 
     MusicViewController *musicViewController;
+    MapViewController *mapViewController;
     /**
      *  在ScrollView 中各个栏目Y坐标值
      */
@@ -57,6 +60,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *menuCommunityLabel;
 
 @property (strong, nonatomic) IBOutlet UIImageView *musicBtn;
+@property (strong, nonatomic) IBOutlet UIImageView *mapBtn;
 
 @property (strong, nonatomic) IBOutlet UIScrollView *mainScrollView;
 @property (strong, nonatomic) IBOutlet UIImageView *logoImageView;

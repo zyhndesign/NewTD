@@ -13,6 +13,14 @@
 		D52206531921B6BA00CBB9F4 /* StoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D52206521921B6BA00CBB9F4 /* StoryViewController.m */; };
 		D52206561921B6C800CBB9F4 /* CommunityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D52206551921B6C800CBB9F4 /* CommunityViewController.m */; };
 		D52206591921BBAC00CBB9F4 /* FooterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D52206581921BBAC00CBB9F4 /* FooterViewController.m */; };
+		D58170D5193832F100090B36 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D58170D4193832F100090B36 /* CoreLocation.framework */; };
+		D58170D7193832FC00090B36 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D58170D6193832FC00090B36 /* QuartzCore.framework */; };
+		D58170D91938330900090B36 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D58170D81938330900090B36 /* OpenGLES.framework */; };
+		D58170DB1938332300090B36 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D58170DA1938332300090B36 /* Security.framework */; };
+		D58170DE19385EB800090B36 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D58170DD19385EB800090B36 /* MapViewController.m */; };
+		D58170E01938650200090B36 /* MapView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D58170DF1938650200090B36 /* MapView.xib */; };
+		D58170E2193867FA00090B36 /* map_with_pin.png in Resources */ = {isa = PBXBuildFile; fileRef = D58170E1193867FA00090B36 /* map_with_pin.png */; };
+		D58171211938744000090B36 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D5E9B53619235DD400DF254B /* libxml2.dylib */; };
 		D58DA43E191B5F3000D900DE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D58DA43D191B5F3000D900DE /* Foundation.framework */; };
 		D58DA440191B5F3000D900DE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D58DA43F191B5F3000D900DE /* CoreGraphics.framework */; };
 		D58DA442191B5F3000D900DE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D58DA441191B5F3000D900DE /* UIKit.framework */; };
@@ -78,7 +86,7 @@
 		D5E3C9CB1920B48500BB5F7E /* DBUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = D5E3C9C61920B48500BB5F7E /* DBUtils.m */; };
 		D5E3C9CC1920B48500BB5F7E /* FileUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = D5E3C9C81920B48500BB5F7E /* FileUtils.m */; };
 		D5E3C9CD1920B48500BB5F7E /* TimeUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = D5E3C9CA1920B48500BB5F7E /* TimeUtil.m */; };
-		D5E3C9D11920B54300BB5F7E /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = D5E3C9CF1920B54300BB5F7E /* Constants.m */; };
+		D5E3C9D11920B54300BB5F7E /* Constants.mm in Sources */ = {isa = PBXBuildFile; fileRef = D5E3C9CF1920B54300BB5F7E /* Constants.mm */; };
 		D5E3C9E51920B6CA00BB5F7E /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = D5E3C9D31920B6C900BB5F7E /* AFHTTPClient.m */; };
 		D5E3C9E61920B6CA00BB5F7E /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = D5E3C9D51920B6CA00BB5F7E /* AFHTTPRequestOperation.m */; };
 		D5E3C9E71920B6CA00BB5F7E /* AFImageRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = D5E3C9D71920B6CA00BB5F7E /* AFImageRequestOperation.m */; };
@@ -94,6 +102,7 @@
 		D5E3C9F71920BAEE00BB5F7E /* DownloadTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D5E3C9F61920BAEE00BB5F7E /* DownloadTableViewCell.m */; };
 		D5E3C9FD1920BE4C00BB5F7E /* UIImageView+RotationAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = D5E3C9FC1920BE4C00BB5F7E /* UIImageView+RotationAnimation.m */; };
 		D5E3CA021920C18400BB5F7E /* SplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5E3CA011920C18400BB5F7E /* SplashViewController.m */; };
+		D5E4EA2D1939B1A8002A695E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5E4EA2C1939B1A7002A695E /* MapKit.framework */; };
 		D5E802DD19259BEE00D3056A /* hasvideo.png in Resources */ = {isa = PBXBuildFile; fileRef = D5E802DC19259BEE00D3056A /* hasvideo.png */; };
 		D5E9B50C1922FD4D00DF254B /* UILabel+VerticalAlign.m in Sources */ = {isa = PBXBuildFile; fileRef = D5E9B50B1922FD4D00DF254B /* UILabel+VerticalAlign.m */; };
 		D5E9B5121923283200DF254B /* VideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5E9B5111923283200DF254B /* VideoViewController.m */; };
@@ -105,10 +114,13 @@
 		D5E9B5261923423300DF254B /* DownloadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5E9B5251923423300DF254B /* DownloadViewController.m */; };
 		D5E9B5301923534700DF254B /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = D5E9B52F1923534700DF254B /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		D5E9B532192354A700DF254B /* download_zh.plist in Resources */ = {isa = PBXBuildFile; fileRef = D5E9B531192354A700DF254B /* download_zh.plist */; };
-		D5E9B53719235DD400DF254B /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D5E9B53619235DD400DF254B /* libxml2.dylib */; };
 		D5EDE6A419248F90008D571E /* MusicPlayerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5EDE6A319248F90008D571E /* MusicPlayerView.xib */; };
 		D5EDE6A719249194008D571E /* MusicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5EDE6A619249194008D571E /* MusicViewController.m */; };
 		D5EDE6AB1924AC84008D571E /* AudioStreamer.m in Sources */ = {isa = PBXBuildFile; fileRef = D5EDE6AA1924AC84008D571E /* AudioStreamer.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D5EE80A1193ABAAF006F8DA4 /* MAMapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5EE80A0193ABAAF006F8DA4 /* MAMapKit.framework */; };
+		D5EE80A5193ABAFA006F8DA4 /* AMap.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D5EE80A4193ABAFA006F8DA4 /* AMap.bundle */; };
+		D5EE80A7193ABB2A006F8DA4 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5EE80A6193ABB2A006F8DA4 /* CoreTelephony.framework */; };
+		D5EE80A9193ABB3D006F8DA4 /* libstdc++.6.0.9.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D5EE80A8193ABB3D006F8DA4 /* libstdc++.6.0.9.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -134,6 +146,14 @@
 		D52206551921B6C800CBB9F4 /* CommunityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommunityViewController.m; sourceTree = "<group>"; };
 		D52206571921BBAC00CBB9F4 /* FooterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FooterViewController.h; sourceTree = "<group>"; };
 		D52206581921BBAC00CBB9F4 /* FooterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FooterViewController.m; sourceTree = "<group>"; };
+		D58170D4193832F100090B36 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		D58170D6193832FC00090B36 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		D58170D81938330900090B36 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		D58170DA1938332300090B36 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		D58170DC19385EB800090B36 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		D58170DD19385EB800090B36 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		D58170DF1938650200090B36 /* MapView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapView.xib; sourceTree = "<group>"; };
+		D58170E1193867FA00090B36 /* map_with_pin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map_with_pin.png; sourceTree = "<group>"; };
 		D58DA43A191B5F3000D900DE /* TongDao.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TongDao.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D58DA43D191B5F3000D900DE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D58DA43F191B5F3000D900DE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -236,7 +256,7 @@
 		D5E3C9C91920B48500BB5F7E /* TimeUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeUtil.h; sourceTree = "<group>"; };
 		D5E3C9CA1920B48500BB5F7E /* TimeUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeUtil.m; sourceTree = "<group>"; };
 		D5E3C9CE1920B54300BB5F7E /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
-		D5E3C9CF1920B54300BB5F7E /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
+		D5E3C9CF1920B54300BB5F7E /* Constants.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Constants.mm; sourceTree = "<group>"; };
 		D5E3C9D01920B54300BB5F7E /* VarUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VarUtils.h; sourceTree = "<group>"; };
 		D5E3C9D21920B6C900BB5F7E /* AFHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPClient.h; sourceTree = "<group>"; };
 		D5E3C9D31920B6C900BB5F7E /* AFHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPClient.m; sourceTree = "<group>"; };
@@ -267,6 +287,7 @@
 		D5E3C9FC1920BE4C00BB5F7E /* UIImageView+RotationAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+RotationAnimation.m"; sourceTree = "<group>"; };
 		D5E3CA001920C18400BB5F7E /* SplashViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplashViewController.h; sourceTree = "<group>"; };
 		D5E3CA011920C18400BB5F7E /* SplashViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplashViewController.m; sourceTree = "<group>"; };
+		D5E4EA2C1939B1A7002A695E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		D5E802DC19259BEE00D3056A /* hasvideo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hasvideo.png; sourceTree = "<group>"; };
 		D5E9B50A1922FD4D00DF254B /* UILabel+VerticalAlign.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+VerticalAlign.h"; sourceTree = "<group>"; };
 		D5E9B50B1922FD4D00DF254B /* UILabel+VerticalAlign.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+VerticalAlign.m"; sourceTree = "<group>"; };
@@ -289,6 +310,12 @@
 		D5EDE6A619249194008D571E /* MusicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicViewController.m; sourceTree = "<group>"; };
 		D5EDE6A91924AC84008D571E /* AudioStreamer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioStreamer.h; sourceTree = "<group>"; };
 		D5EDE6AA1924AC84008D571E /* AudioStreamer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioStreamer.m; sourceTree = "<group>"; };
+		D5EE80A0193ABAAF006F8DA4 /* MAMapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MAMapKit.framework; path = "../../../../MAC_DATA/第三方组件/AMap_iOS_API_Lib_V2.2.1/2D/MAMapKit.framework"; sourceTree = "<group>"; };
+		D5EE80A4193ABAFA006F8DA4 /* AMap.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AMap.bundle; sourceTree = "<group>"; };
+		D5EE80A6193ABB2A006F8DA4 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		D5EE80A8193ABB3D006F8DA4 /* libstdc++.6.0.9.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.0.9.dylib"; path = "usr/lib/libstdc++.6.0.9.dylib"; sourceTree = SDKROOT; };
+		D5EE80AA193ABC75006F8DA4 /* APIKey.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APIKey.h; sourceTree = "<group>"; };
+		D5FA1D3C193EACFB009D1EC4 /* PopLayerProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PopLayerProtocol.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -296,7 +323,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D5E9B53719235DD400DF254B /* libxml2.dylib in Frameworks */,
+				D5EE80A9193ABB3D006F8DA4 /* libstdc++.6.0.9.dylib in Frameworks */,
+				D5EE80A7193ABB2A006F8DA4 /* CoreTelephony.framework in Frameworks */,
+				D5EE80A1193ABAAF006F8DA4 /* MAMapKit.framework in Frameworks */,
+				D5E4EA2D1939B1A8002A695E /* MapKit.framework in Frameworks */,
+				D58171211938744000090B36 /* libxml2.dylib in Frameworks */,
+				D58170DB1938332300090B36 /* Security.framework in Frameworks */,
+				D58170D91938330900090B36 /* OpenGLES.framework in Frameworks */,
+				D58170D7193832FC00090B36 /* QuartzCore.framework in Frameworks */,
+				D58170D5193832F100090B36 /* CoreLocation.framework in Frameworks */,
 				D5E3C9A119205D0200BB5F7E /* CoreData.framework in Frameworks */,
 				D5E3C99F19205CFA00BB5F7E /* AudioToolbox.framework in Frameworks */,
 				D5E3C99D19205CEB00BB5F7E /* SystemConfiguration.framework in Frameworks */,
@@ -322,6 +357,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D58170A819382E8600090B36 /* gaodeMap */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = gaodeMap;
+			path = baiduMap;
+			sourceTree = "<group>";
+		};
 		D58DA431191B5F3000D900DE = {
 			isa = PBXGroup;
 			children = (
@@ -344,6 +387,14 @@
 		D58DA43C191B5F3000D900DE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D5EE80A8193ABB3D006F8DA4 /* libstdc++.6.0.9.dylib */,
+				D5EE80A6193ABB2A006F8DA4 /* CoreTelephony.framework */,
+				D5EE80A0193ABAAF006F8DA4 /* MAMapKit.framework */,
+				D5E4EA2C1939B1A7002A695E /* MapKit.framework */,
+				D58170DA1938332300090B36 /* Security.framework */,
+				D58170D81938330900090B36 /* OpenGLES.framework */,
+				D58170D6193832FC00090B36 /* QuartzCore.framework */,
+				D58170D4193832F100090B36 /* CoreLocation.framework */,
 				D5E9B53619235DD400DF254B /* libxml2.dylib */,
 				D5E3C9A019205D0200BB5F7E /* CoreData.framework */,
 				D5E3C99E19205CFA00BB5F7E /* AudioToolbox.framework */,
@@ -363,6 +414,8 @@
 		D58DA443191B5F3000D900DE /* TongDao */ = {
 			isa = PBXGroup;
 			children = (
+				D5FA1D3B193EACD2009D1EC4 /* protocols */,
+				D5EE80A4193ABAFA006F8DA4 /* AMap.bundle */,
 				D5E9B51919233E0200DF254B /* files */,
 				D5E3C9BE1920B11100BB5F7E /* classes */,
 				D58DA4EF191B610F00D900DE /* controllers */,
@@ -372,13 +425,14 @@
 				D58DA44C191B5F3000D900DE /* AppDelegate.h */,
 				D58DA44D191B5F3000D900DE /* AppDelegate.m */,
 				D5E3C9CE1920B54300BB5F7E /* Constants.h */,
-				D5E3C9CF1920B54300BB5F7E /* Constants.m */,
+				D5E3C9CF1920B54300BB5F7E /* Constants.mm */,
 				D5E3C9D01920B54300BB5F7E /* VarUtils.h */,
 				D58DA44F191B5F3000D900DE /* Main.storyboard */,
 				D58DA452191B5F3000D900DE /* ViewController.h */,
 				D58DA453191B5F3000D900DE /* ViewController.m */,
 				D58DA455191B5F3000D900DE /* Images.xcassets */,
 				D58DA444191B5F3000D900DE /* Supporting Files */,
+				D5EE80AA193ABC75006F8DA4 /* APIKey.h */,
 			);
 			path = TongDao;
 			sourceTree = "<group>";
@@ -417,6 +471,7 @@
 		D58DA473191B60A000D900DE /* images */ = {
 			isa = PBXGroup;
 			children = (
+				D58170E1193867FA00090B36 /* map_with_pin.png */,
 				D5E802DC19259BEE00D3056A /* hasvideo.png */,
 				D58DA50B191B700C00D900DE /* music_entrance.gif */,
 				D58DA50C191B700C00D900DE /* video.png */,
@@ -431,6 +486,7 @@
 		D58DA474191B60A000D900DE /* libs */ = {
 			isa = PBXGroup;
 			children = (
+				D58170A819382E8600090B36 /* gaodeMap */,
 				D5EDE6A81924AC6F008D571E /* AudioStream */,
 				D5E9B52D1923534700DF254B /* JSONKit */,
 				D5E9B515192329C200DF254B /* GDataXml */,
@@ -565,6 +621,7 @@
 				D5E3C9F31920BAA400BB5F7E /* DownloadTableViewCell.xib */,
 				D5E9B5131923286000DF254B /* VideoPlay.xib */,
 				D5EDE6A319248F90008D571E /* MusicPlayerView.xib */,
+				D58170DF1938650200090B36 /* MapView.xib */,
 			);
 			path = xibs;
 			sourceTree = "<group>";
@@ -598,6 +655,8 @@
 				D52206581921BBAC00CBB9F4 /* FooterViewController.m */,
 				D5EDE6A519249194008D571E /* MusicViewController.h */,
 				D5EDE6A619249194008D571E /* MusicViewController.m */,
+				D58170DC19385EB800090B36 /* MapViewController.h */,
+				D58170DD19385EB800090B36 /* MapViewController.m */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -673,6 +732,14 @@
 				D5EDE6AA1924AC84008D571E /* AudioStreamer.m */,
 			);
 			path = AudioStream;
+			sourceTree = "<group>";
+		};
+		D5FA1D3B193EACD2009D1EC4 /* protocols */ = {
+			isa = PBXGroup;
+			children = (
+				D5FA1D3C193EACFB009D1EC4 /* PopLayerProtocol.h */,
+			);
+			path = protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -770,8 +837,10 @@
 				D5E3C9B119209B9600BB5F7E /* HumanityContentPanel.xib in Resources */,
 				D5E3C9F21920B9B800BB5F7E /* DownloadWin.xib in Resources */,
 				D58DA503191B6A3000D900DE /* bg4.jpg in Resources */,
+				D58170E2193867FA00090B36 /* map_with_pin.png in Resources */,
 				D5E3C9AB19207EAE00BB5F7E /* CommunityBoard.xib in Resources */,
 				D5E3C9A319206F6800BB5F7E /* HomeBoard.xib in Resources */,
+				D5EE80A5193ABAFA006F8DA4 /* AMap.bundle in Resources */,
 				D58DA4FC191B6A3000D900DE /* bg0@2x.jpg in Resources */,
 				D5E9B5141923286000DF254B /* VideoPlay.xib in Resources */,
 				D5E9B52319233E5200DF254B /* 404-1.png in Resources */,
@@ -791,6 +860,7 @@
 				D58DA509191B6FC500D900DE /* projectbg_bg_02.png in Resources */,
 				D58DA500191B6A3000D900DE /* bg2@2x.jpg in Resources */,
 				D58DA451191B5F3000D900DE /* Main.storyboard in Resources */,
+				D58170E01938650200090B36 /* MapView.xib in Resources */,
 				D58DA4FB191B6A3000D900DE /* bg0.jpg in Resources */,
 				D5E3C9A919207D6E00BB5F7E /* StoryBoard.xib in Resources */,
 				D5E3C9B71920AEAE00BB5F7E /* PopDetailView.xib in Resources */,
@@ -818,8 +888,9 @@
 				D58DA4D7191B60A000D900DE /* FMDatabase.m in Sources */,
 				D5E3CA021920C18400BB5F7E /* SplashViewController.m in Sources */,
 				D5E9B518192329C200DF254B /* GDataXMLNode.m in Sources */,
+				D58170DE19385EB800090B36 /* MapViewController.m in Sources */,
 				D5E3C9E91920B6CA00BB5F7E /* AFNetworkActivityIndicatorManager.m in Sources */,
-				D5E3C9D11920B54300BB5F7E /* Constants.m in Sources */,
+				D5E3C9D11920B54300BB5F7E /* Constants.mm in Sources */,
 				D52206561921B6C800CBB9F4 /* CommunityViewController.m in Sources */,
 				D58DA4D8191B60A000D900DE /* FMDatabaseAdditions.m in Sources */,
 				D58DA4E2191B60A000D900DE /* unzip.c in Sources */,
@@ -941,6 +1012,7 @@
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_INPUT_FILETYPE = automatic;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -955,6 +1027,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;
 			};
@@ -980,6 +1053,7 @@
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_INPUT_FILETYPE = automatic;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -987,6 +1061,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_LDFLAGS = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;
 				VALIDATE_PRODUCT = YES;
@@ -998,10 +1073,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Zhongyi (Hunan) Industrial Design Co., Ltd. (FNB4FR5EG6)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Zhongyi (Hunan) Industrial Design Co., Ltd. (FNB4FR5EG6)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Ling Li (4366PRAT2A)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Ling Li (4366PRAT2A)";
 				COMPRESS_PNG_FILES = YES;
-				FRAMEWORK_SEARCH_PATHS = /usr/lib/libxml2.dylib;
+				FRAMEWORK_SEARCH_PATHS = (
+					/usr/lib/libxml2.dylib,
+					"/Volumes/MAC_DATA/第三方组件/AMap_iOS_API_Lib_V2.2.1/2D",
+				);
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TongDao/TongDao-Prefix.pch";
@@ -1011,15 +1089,18 @@
 					"$(SDKROOT)/usr/include/libxml2",
 				);
 				INFOPLIST_FILE = "TongDao/TongDao-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Volumes/MAC_DATA/第三方组件/GoogleAnalyticsServicesiOS_3.06",
 					"$(SDKROOT)/usr/include/libxml2",
 				);
-				OTHER_LDFLAGS = "-lxml2";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lxml2",
+				);
 				PRODUCT_NAME = TongDao;
-				PROVISIONING_PROFILE = "06B34DFE-706D-4831-87D1-F3667CFCC2D3";
+				PROVISIONING_PROFILE = "1BD46108-459F-4827-B701-178AC3CC6932";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1029,10 +1110,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Zhongyi (Hunan) Industrial Design Co., Ltd. (FNB4FR5EG6)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Zhongyi (Hunan) Industrial Design Co., Ltd. (FNB4FR5EG6)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Ling Li (4366PRAT2A)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Ling Li (4366PRAT2A)";
 				COMPRESS_PNG_FILES = YES;
-				FRAMEWORK_SEARCH_PATHS = /usr/lib/libxml2.dylib;
+				FRAMEWORK_SEARCH_PATHS = (
+					/usr/lib/libxml2.dylib,
+					"/Volumes/MAC_DATA/第三方组件/AMap_iOS_API_Lib_V2.2.1/2D",
+				);
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TongDao/TongDao-Prefix.pch";
@@ -1042,15 +1126,18 @@
 					"$(SDKROOT)/usr/include/libxml2",
 				);
 				INFOPLIST_FILE = "TongDao/TongDao-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Volumes/MAC_DATA/第三方组件/GoogleAnalyticsServicesiOS_3.06",
 					"$(SDKROOT)/usr/include/libxml2",
 				);
-				OTHER_LDFLAGS = "-lxml2";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lxml2",
+				);
 				PRODUCT_NAME = TongDao;
-				PROVISIONING_PROFILE = "06B34DFE-706D-4831-87D1-F3667CFCC2D3";
+				PROVISIONING_PROFILE = "1BD46108-459F-4827-B701-178AC3CC6932";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

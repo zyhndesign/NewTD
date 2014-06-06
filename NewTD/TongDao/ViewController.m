@@ -16,8 +16,9 @@
 #import "controllers/FooterViewController.h"
 #import "controllers/CommunityViewController.h"
 #import "controllers/MusicViewController.h"
+#import "controllers/MapViewController.h"
 
-@interface ViewController ()
+@interface ViewController ()<PopLayerProtocol>
 
 @end
 
@@ -26,7 +27,7 @@
 @synthesize menuCommunityBtn, menuStoryBtn,menuLandscapeBtn,menuHumanityBtn;
 
 @synthesize menuCommunityLabel, menuHumanityLabel, menuLandscapeLabel, menuStoryLabel;
-@synthesize mainScrollView, logoImageView;
+@synthesize mainScrollView, logoImageView, mapBtn;
 
 @synthesize musicBtn;
 
@@ -129,6 +130,11 @@
     musicBtn.userInteractionEnabled = YES;
     UITapGestureRecognizer *sigTab = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(musicBtnClick)];
     [musicBtn addGestureRecognizer:sigTab];
+    
+    mapBtn.userInteractionEnabled = YES;
+    UITapGestureRecognizer *mapTab = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(mapBtnClick)];
+    [mapBtn addGestureRecognizer:mapTab];
+    
     
 }
 
@@ -285,5 +291,37 @@
         }
     }
    
+}
+
+-(void)mapBtnClick
+{
+    mapViewController = [[MapViewController alloc] initWithNibName:@"MapView" bundle:nil];
+    mapViewController.delegate = self;
+    [self.view addSubview:mapViewController.view];
+    [mapViewController.view setFrame:CGRectMake(0, 768, mapViewController.view.frame.size.width, mapViewController.view.frame.size.height)];
+    
+    [UIView animateWithDuration:1.0 animations:^{
+        NSLog(@"Animation start....");
+        [mapViewController.view setFrame:CGRectMake(0, 0, mapViewController.view.frame.size.width, mapViewController.view.frame.size.height)];
+    } completion:^(BOOL finished) {
+        NSLog(@"Animation done....");
+    }];
+
+}
+
+- (void) closeButtonClicked
+{
+    if (mapViewController != nil)
+    {
+        [UIView animateWithDuration:1.0 animations:^{
+            NSLog(@"remove Animation start....");
+            [mapViewController.view setFrame:CGRectMake(0, 768, mapViewController.view.frame.size.width, mapViewController.view.frame.size.height)];
+        } completion:^(BOOL finished) {
+            NSLog(@"remove Animation done....");
+        }];
+        [mapViewController removeFromParentViewController];
+        mapViewController = nil;
+    }
+    
 }
 @end
