@@ -376,6 +376,10 @@ int communityDownSign = 0;
                     [communityQueue addOperation:operation];
                 }
             }
+            else
+            {
+                [db updateSignByServerId:[nsDict objectForKey:@"serverID"]];
+            }
         }
         
     }

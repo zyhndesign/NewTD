@@ -233,7 +233,7 @@ NSString* path = nil;
     if ([db open])
     {
         NSString* sql = [@"select serverID,url,hasVideo,size from contentlist where isDownload = 0 and category = " stringByAppendingFormat:@"%d", category];
-                FMResultSet *rs = [db executeQuery:sql];
+        FMResultSet *rs = [db executeQuery:sql];
         while ([rs next])
         {
             nsDict = [NSMutableDictionary new];
